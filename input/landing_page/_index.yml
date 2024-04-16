@@ -1,0 +1,6 @@
+- name: AGES-MedicinalProduct-R5
+- version: 0.1.0
+- description: FHIR&reg; R5 Implementation Guide for the national provision of medicinal product information.
+- last_published: %%date%%
+- branch: %%branch%%
+- type: draft
