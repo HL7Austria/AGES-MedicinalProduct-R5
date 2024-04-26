@@ -1,1 +1,0 @@
-cp -v ./old/test_redirects ./input/redirects/test_redirects && cp -v ./old/test_redirects.asdf ./input/redirects/test_redirects.asdf

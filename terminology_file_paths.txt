@@ -1,2 +1,0 @@
-./terminologies/ValueSet-eimpf-impfstoffe/ ValueSet-eimpf-impfstoffe.1.svsextelga.xml
-./terminologies/ValueSet-eimpf-impfstoffe/CodeSystem-appc-anatomie.2.claml.xml

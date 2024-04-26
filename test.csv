@@ -1,4 +1,0 @@
-name,canonical,oid,version
-,http://loinc.org,2.16.840.1.113883.6.1,
-CodeSystem-appc-anatomie,https://termgit.elga.gv.at/CodeSystem-appc-anatomie,1.2.40.0.34.5.38.4,1.0.10a
-ValueSet-appc-anatomie,https://termgit.elga.gv.at/ValueSet-appc-anatomie,1.2.40.0.34.10.65,1.0.10a
