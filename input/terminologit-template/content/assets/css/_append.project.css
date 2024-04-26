@@ -1,0 +1,26 @@
+.header-row {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #598ac6;
+  border: 1px solid #598ac6;
+  border-bottom-color: transparent;
+}
+
+.nav-tabs {
+    border-bottom-color: #598ac6;
+}
+
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+    border-bottom-color: #598ac6;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    border-bottom: 2px solid #598ac6;
+}

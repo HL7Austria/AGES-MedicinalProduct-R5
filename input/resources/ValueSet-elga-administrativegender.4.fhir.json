@@ -1,0 +1,238 @@
+{
+  "resourceType": "ValueSet",
+  "id": "elga-administrativegender",
+  "meta": {
+    "profile": [
+      "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-valueset"
+    ]
+  },
+  "url": "https://termgit.elga.gv.at/ValueSet/elga-administrativegender",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.2.40.0.34.10.4"
+    }
+  ],
+  "version": "2.1.0+20240325",
+  "name": "elga-administrativegender",
+  "title": "ELGA_AdministrativeGender",
+  "status": "active",
+  "date": "2024-03-25",
+  "publisher": "see",
+  "contact": [
+    {
+      "name": "http://www.hl7.org",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "**Description:** The gender of a person used for adminstrative purposes (as opposed to clinical gender).\n\n**Beschreibung:** Das Geschlecht einer Person zur administrativen Nutzung (entspricht nicht notwendigerweise dem biologischen oder medizinischen Geschlecht).",
+  "compose": {
+    "include": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+            "valueOid": "urn:oid:2.16.840.1.113883.5.1"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "code": "F",
+            "display": "Female",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Weiblich"
+              }
+            ]
+          },
+          {
+            "code": "M",
+            "display": "Male",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "M\u00e4nnlich"
+              }
+            ]
+          },
+          {
+            "code": "UN",
+            "display": "Undifferentiated",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Nicht-bin\u00e4r"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+            "valueOid": "urn:oid:1.2.40.0.34.5.224"
+          }
+        ],
+        "system": "https://termgit.elga.gv.at/CodeSystem/hl7-at-administrativegender-ergaenzung",
+        "version": "1.0.0+20231113",
+        "concept": [
+          {
+            "code": "D",
+            "display": "Divers",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Divers"
+              }
+            ]
+          },
+          {
+            "code": "I",
+            "display": "Inter",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Inter"
+              }
+            ]
+          },
+          {
+            "code": "O",
+            "display": "Offen",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Offen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-03-25T06:36:54+00:00",
+    "contains": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+            "valueOid": "urn:oid:2.16.840.1.113883.5.1"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+        "version": "2.1.0",
+        "code": "F",
+        "display": "Female",
+        "designation": [
+          {
+            "language": "de-AT",
+            "value": "Weiblich"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+            "valueOid": "urn:oid:2.16.840.1.113883.5.1"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+        "version": "2.1.0",
+        "code": "M",
+        "display": "Male",
+        "designation": [
+          {
+            "language": "de-AT",
+            "value": "M\u00e4nnlich"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+            "valueOid": "urn:oid:2.16.840.1.113883.5.1"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+        "version": "2.1.0",
+        "code": "UN",
+        "display": "Undifferentiated",
+        "designation": [
+          {
+            "language": "de-AT",
+            "value": "Nicht-bin\u00e4r"
+          }
+        ],
+        "contains": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+                "valueOid": "urn:oid:1.2.40.0.34.5.224"
+              }
+            ],
+            "system": "https://termgit.elga.gv.at/CodeSystem/hl7-at-administrativegender-ergaenzung",
+            "version": "1.0.0+20231113",
+            "code": "D",
+            "display": "Divers",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Divers"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+                "valueOid": "urn:oid:1.2.40.0.34.5.224"
+              }
+            ],
+            "system": "https://termgit.elga.gv.at/CodeSystem/hl7-at-administrativegender-ergaenzung",
+            "version": "1.0.0+20231113",
+            "code": "I",
+            "display": "Inter",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Inter"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-valueset-systemoid",
+                "valueOid": "urn:oid:1.2.40.0.34.5.224"
+              }
+            ],
+            "system": "https://termgit.elga.gv.at/CodeSystem/hl7-at-administrativegender-ergaenzung",
+            "version": "1.0.0+20231113",
+            "code": "O",
+            "display": "Offen",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Offen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

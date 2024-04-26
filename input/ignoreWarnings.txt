@@ -3,3 +3,29 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# Descriptions should be provided within the respective terminologies. However, they are not always available.
+%Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.%
+
+# Within template files the root cannot be 'html' or 'div'
+Root node must be 'html' or 'div', but is table
+
+# Publish box has been intentionally removed from TerminoloGit template
+The html source does not contain the publish box; this is recommended for publishing support (see note at http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7_HTML_Standards_considerations). Note that this is mandatory for HL7 specifications, and on the ci-build, but in other cases it's still recommended (this is only reported once, but applies for all pages)
+
+# CodeSystems do not conform to the ShareableCodeSystem profile yet
+CODESYSTEM_SHAREABLE_MISSING
+CODESYSTEM_SHAREABLE_MISSING_HL7
+
+# ValueSets do not conform to the ShareableValueSet profile yet
+VALUESET_SHAREABLE_MISSING
+VALUESET_SHAREABLE_MISSING_HL7
+
+# ConceptMaps do not conform to the ShareableConceptMap profile yet
+CONCEPTMAP_SHAREABLE_MISSING
+
+# Whitespaces in values (e.g. properties) - see https://gitlab.com/elga-gmbh/malac-ct/-/issues/42
+Type_Specific_Checks_DT_String_WS
+
+# New warning introduced by the publisher see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)

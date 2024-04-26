@@ -1,0 +1,591 @@
+default:
+  # all jobs are interruptible, thus they will be cancelled if a newer pipeline starts before a job is completed
+  interruptible: true
+
+variables:
+  AUTOMATIC_COMMIT_PREFIX: "AUTOMATIC_COMMIT"
+  AUTOMATIC_COMMIT_UPDATE_TERMINOLOGIES: "${AUTOMATIC_COMMIT_PREFIX} update terminologies"
+  # Based on https://docs.gitlab.com/ee/user/project/repository/monorepos/index.html#shallow-cloning shallow clones have been deactivated
+  # as they result in difficulties to detect terminologies that should be processed by MaLaC-CT correctly.
+  GIT_DEPTH: 0
+
+stages:
+  - manual_trigger
+  - check_variables
+  - run_malac-ct
+  - run_ig
+  - update_html
+  - publish
+
+############################
+#
+# This job forces manual pipeline starts for commits not on the default branch.
+#
+############################
+manual_trigger:
+  tags:
+    # if you have an GitLab SaaS plan, than you can use the faster "saas-linux-large-amd64" by setting RUNNER_TAG in CI/CD variables
+    # else if you have your own runner, than please give them tags by the registration, that further can be used here, see https://docs.gitlab.com/14.10/runner/#tags and for k8s config https://gitlab.com/gitlab-org/charts/gitlab-runner/blob/main/values.yaml#L358
+    # else, there are free runner you can use, set RUNNER_TAG in CI/CD variables to "saas-linux-medium-amd64" or to the smaller, quicker availible, but still not recommended "saas-linux-small-amd64"
+    - $RUNNER_TAG
+  stage: manual_trigger
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if it is NOT the default branch
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    - if: $CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $CI_PIPELINE_SOURCE != "pipeline"
+      when: manual
+
+  script:
+    - echo $CI_COMMIT_BRANCH
+
+  retry: 2
+
+
+check_variables:
+  tags:
+    - $RUNNER_TAG
+  stage: check_variables
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    # - OR
+    # - if it has been triggered by another pipeline
+    # - AND if $MALAC_CT_PROJECT_BRANCH has been set
+    - if: ($CI_COMMIT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/) || ($CI_PIPELINE_SOURCE == "pipeline" && $MALAC_CT_PROJECT_BRANCH)
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+
+  script:
+    - chmod u+x check_environment_variables.sh
+    - ./check_environment_variables.sh
+
+  retry: 2
+
+
+############################
+#
+# Job checks if any of the terminologies' source files has been changed and
+# triggers malac-ct in subprocesses in order to propagate updates to all
+# source file formats. Updated source file formats will be commited and pushed
+# to this repository.
+#
+############################
+run_malac-ct:
+  tags:
+    - $RUNNER_TAG
+  stage: run_malac-ct
+
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if commit titel does NOT start with "SKIP_MALAC"
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    - if: $CI_COMMIT_BRANCH && $CI_COMMIT_TITLE !~ /^SKIP_MALAC.*/ && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $CI_PIPELINE_SOURCE != "pipeline"
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+    # set up git config
+    - git config --global user.email "$GITLAB_USER_OR_TERMGIT_BOT_EMAIL"
+    - git config --global user.name "$GITLAB_USER_OR_TERMGIT_BOT_NAME"
+
+  variables:
+    SECURE_FILES_DOWNLOAD_PATH: './secure_files_4_fhir_upload/'
+
+
+  script:
+    # https://docs.gitlab.com/ee/ci/secure_files/#use-secure-files-in-cicd-jobs
+    - curl -s https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer | bash
+
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    # clone malac-ct
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/elga-gmbh/malac-ct.git ./malac-ct
+
+    # make sure ./terminologies directory exists
+    - mkdir -pv ./terminologies
+
+    # determine those terminologies that have been changed since the last successful pipeline run
+    - python determine_terminology_file_paths.py
+    # execute malac-ct for terminologies within terminology_file_paths.txt
+    - python run_malac-ct.py -i terminology_file_paths.txt
+    # make sure processedTerminologies.csv exists
+    - touch processedTerminologies.csv
+
+    # remove sub-directory of malac-ct
+    - rm -rvf malac-ct
+
+    # commit and push changes
+    - git add -A terminologies
+    - git status
+    - git commit -m "$AUTOMATIC_COMMIT_UPDATE_TERMINOLOGIES" || echo "nothing to commit"
+    - git push "https://${GITLAB_USER_LOGIN}:${GITLAB_CI_TOKEN}@gitlab.com/${CI_PROJECT_PATH}" HEAD:${CI_COMMIT_BRANCH}
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  # make names of changed resources available for "run_ig"
+  artifacts:
+    paths:
+      # list of processed terminologies
+      - processedTerminologies.csv
+      # Git SHA of last successful pipeline run
+      - lastSuccessfulPipeline.txt
+      # the paths to the terminologies that have been changed in the initiating commit
+      - terminology_file_paths.txt
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+
+############################
+#
+# Job performs an integration test of the provided MaLaC-CT branch and all
+# terminologies that are currently available within project "elga-gmbh/termgit"
+#
+# Job will not perform any commits!
+#
+############################
+run_malac-ct_integration_test:
+  tags:
+    - $RUNNER_TAG
+  stage: run_malac-ct
+
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it has been triggered by another pipeline
+    # - AND if $MALAC_CT_PROJECT_BRANCH has been set
+    - if: $CI_PIPELINE_SOURCE == "pipeline" && $MALAC_CT_PROJECT_BRANCH
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+    # set up git config
+    - git config --global user.email "$GITLAB_USER_OR_TERMGIT_BOT_EMAIL"
+    - git config --global user.name "$GITLAB_USER_OR_TERMGIT_BOT_NAME"
+
+  variables:
+    SECURE_FILES_DOWNLOAD_PATH: './secure_files_4_fhir_upload/'
+
+  script:
+    # https://docs.gitlab.com/ee/ci/secure_files/#use-secure-files-in-cicd-jobs
+    - curl -s https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer | bash
+
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    # clone specific branch from malac-ct
+    - echo "MaLaC-CT - cloning ${MALAC_CT_PROJECT_BRANCH} branch of ${MALAC_CT_PROJECT}"
+    - git clone --branch $MALAC_CT_PROJECT_BRANCH https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/${MALAC_CT_PROJECT}.git ./malac-ct
+
+    # remove terminologies from this repository
+    - rm -rf terminologies
+    # clone current termgit project
+    - echo "Terminologies - cloning ${TERMGIT_TERMINOLOGIES_PROJECT_BRANCH} branch of ${TERMGIT_TERMINOLOGIES_PROJECT} which provides the terminologies for this integration test"
+    - git clone --branch $TERMGIT_TERMINOLOGIES_PROJECT_BRANCH https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/${TERMGIT_TERMINOLOGIES_PROJECT}.git
+    # mv current terminologies from termgit
+    - mv termgit/terminologies ./terminologies
+    # remove termgit project
+    - rm -rf termgit
+    # simulate that all terminologies have not yet been converted
+    - echo "using ${CS_INPUT_FORMAT} as import format for CodeSystems"
+    - find terminologies/CodeSystem-* -type f -not -name "CodeSystem-*$CS_INPUT_FORMAT" -delete
+    - echo "using ${VS_INPUT_FORMAT} as import format for ValueSets"
+    - find terminologies/ValueSet-* -type f -not -name "ValueSet-*$VS_INPUT_FORMAT" -delete
+
+    # create list of terminologies within "terminologies/CodeSystem*" and "terminologies/ValueSet*" directories
+    - find terminologies/CodeSystem* terminologies/ValueSet* -type f > terminology_file_paths.txt
+
+    # execute malac-ct for terminologies within terminology_file_paths.txt
+    - python run_malac-ct.py -i terminology_file_paths.txt
+    # make sure processedTerminologies.csv exists
+    - touch processedTerminologies.csv
+
+    # remove sub-directory of malac-ct
+    - rm -rvf malac-ct
+
+    # preserve URL to this job's details for accessing artifacts
+    - echo $CI_JOB_URL > run_malac-ct_job_url.txt
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  artifacts:
+    paths:
+      # directory containing freshly converted terminologies
+      - terminologies/
+      # list of processed terminologies
+      - processedTerminologies.csv
+      # the paths to the terminologies that have been changed in the initiating commit
+      - terminology_file_paths.txt
+      # URL to this job's details
+      - run_malac-ct_job_url.txt
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+
+############################
+#
+# Assuming that all terminologies have been updated separately from this pipeline
+# one might want to skip conversion by MaLaC-CT in order to save time. This can be
+# done with this job.
+# Note, that this job then creates a new entry in the "previous versions" for ALL
+# terminologies. This job assumes that ALL terminologies have been updated.
+#
+############################
+skip_malac-ct:
+  tags:
+    - $RUNNER_TAG
+  stage: run_malac-ct
+
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if commit titel DOES start with "SKIP_MALAC"
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    - if: $CI_COMMIT_BRANCH && $CI_COMMIT_TITLE =~ /^SKIP_MALAC.*/ && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $CI_PIPELINE_SOURCE != "pipeline"
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+
+  script:
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    # make sure ./terminologies directory exists
+    - mkdir -pv ./terminologies
+    # make sure ./terminologies/processedTerminologies.csv exists
+    - touch ./terminologies/terminologiesMetadata.csv
+    # determine those terminologies that have been changed since the last successful pipeline run, used later in update_html_with_diff
+    - python determine_terminology_file_paths.py
+
+    # prepare list of processed terminologies
+    - cp ./terminologies/terminologiesMetadata.csv processedTerminologies.csv
+
+    # remove those terminologies that do not exist within ./terminologies (e.g. LOINC)
+    - python remove_nonexistent_terminologies.py
+
+    # Git SHA of this commit
+    - git log --pretty=%H -1 > tmp_lastSuccessfulPipeline.txt
+    - tr -d '\n' < tmp_lastSuccessfulPipeline.txt > lastSuccessfulPipeline.txt
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  # make names of changed resources available for "run_ig"
+  artifacts:
+    paths:
+      # list of processed terminologies
+      - processedTerminologies.csv
+      # Git SHA of last successful pipeline run
+      - lastSuccessfulPipeline.txt
+      # the paths to the terminologies that have been changed in the initiating commit
+      - terminology_file_paths.txt
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+
+############################
+#
+# Job creates or enhances HTML fragments for old versions of terminologies. Furthermore, it
+# creates the HTML fragments for downloading the current version of the terminologies.
+# Eventually, it runs the IG publisher and pushes the output to the HTML project if
+# job was started on default branch.
+#
+############################
+run_ig:
+  tags:
+    - $RUNNER_TAG_FOR_IG_RUN
+  stage: run_ig
+
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    # - OR
+    # - if it has been triggered by another pipeline
+    # - AND if $MALAC_CT_PROJECT_BRANCH has been set
+    - if: ($CI_COMMIT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/) || ($CI_PIPELINE_SOURCE == "pipeline" && $MALAC_CT_PROJECT_BRANCH)
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+    # set up git config
+    - git config --global user.email "$GITLAB_USER_OR_TERMGIT_BOT_EMAIL"
+    - git config --global user.name "$GITLAB_USER_OR_TERMGIT_BOT_NAME"
+
+  script:
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    # checkout and pull latest changes to this repository
+    - git log -n1 --format=format:"%H"
+    - git checkout ${CI_COMMIT_BRANCH}
+    - git pull
+    - git log -n1 --format=format:"%H"
+
+    # make sure that sh-scripts are executable
+    - chmod u+x ./create-terminologit.sh
+    - chmod u+x ./_genonce.sh
+
+    - ./create-terminologit.sh
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  artifacts:
+    paths:
+      - output/
+      - removed_from_output/
+      - log_appendix/
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+
+############################
+#
+# Job publishes the pages output to the html project.
+#
+############################
+
+update_html_full_content:
+  tags:
+    - $RUNNER_TAG
+  stage: update_html
+
+  # TODO check out a slim image with only git
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it is a commit on the default branch (not for a tag)
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    # - AND if it has NOT been triggered by another pipeline
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $CI_PIPELINE_SOURCE != "pipeline"
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+    # set up git config
+    - git config --global user.email "$GITLAB_USER_OR_TERMGIT_BOT_EMAIL"
+    - git config --global user.name "$GITLAB_USER_OR_TERMGIT_BOT_NAME"
+
+  script:
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    - echo "UPDATE ${TERMGIT_HTML_PROJECT}"
+
+    # retrieve old IG's output (necessary for detecting resource changes)
+    - echo "clone ${TERMGIT_HTML_PROJECT} containing old IG's output"
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/${TERMGIT_HTML_PROJECT}.git ./termgit-html-project
+
+    # copy current IG output to termgit-html-project/output in order to persist IG output
+    - echo "Copy output to termgit-html-project/output"
+    - mkdir -pv ./termgit-html-project/output/
+    - rm -rvf ./termgit-html-project/output/*
+    - cp -rv ./output/* ./termgit-html-project/output/
+
+    # change into directory of old IG output
+    - echo "change to termgit-html-project"
+    - echo "pwd $PWD"
+    - cd termgit-html-project
+    - echo "pwd $PWD"
+
+    # commit and push changes
+    - git add -A
+    - git commit -m "${AUTOMATIC_COMMIT_PREFIX} update IG output" -m "$CI_COMMIT_MESSAGE"
+    - git push "https://${GITLAB_USER_LOGIN}:${GITLAB_CI_TOKEN}@gitlab.com/${TERMGIT_HTML_PROJECT}.git" HEAD:${TERMGIT_HTML_PROJECT_DEFAULT_BRANCH}
+
+    - echo "FINISHED UPDATE ${TERMGIT_HTML_PROJECT}"
+
+    - echo "${CI_JOB_NAME} has finished"
+  artifacts:
+    paths:
+      - termgit-html-project/output/
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+
+############################
+#
+# Job updates the html project with only the differential build from the changed terminologies
+#
+############################
+update_html_with_diff: # this could also be used on the default branch
+  tags:
+    - $RUNNER_TAG
+  stage: update_html
+
+  # TODO check out a slim image with git
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will run
+    # - if it is a commit on not the default branch (also not for a tag or merge request)
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    # - AND if it has NOT been triggered by another pipeline
+    - if: $CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $CI_PIPELINE_SOURCE != "pipeline"
+
+  before_script:
+    - chmod u+x create_gitlab_ci_token.sh
+    # see https://askubuntu.com/questions/53177/bash-script-to-set-environment-variables-not-working regarding the leading '.'
+    - . ./create_gitlab_ci_token.sh
+    # set up git config
+    - git config --global user.email "$GITLAB_USER_OR_TERMGIT_BOT_EMAIL"
+    - git config --global user.name "$GITLAB_USER_OR_TERMGIT_BOT_NAME"
+
+  script:
+    # log version of fsh-ing-grounds
+    - cat /opt/fsh-ing-grounds.version
+
+    - echo "UPDATE ${TERMGIT_HTML_PROJECT}"
+
+    # retrieve old IG's output (necessary for detecting resource changes)
+    - echo "clone ${TERMGIT_HTML_PROJECT} containing old IG's output"
+    # if the CI_DEFAULT_BRANCH in the project we are now does exists, than pull that one
+    # else pull as default the default breach
+    # be aware: if you branch from a branch, the default branch will be cloned, not the branch your branch came from!
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/${TERMGIT_HTML_PROJECT}.git ./termgit-html-project
+    # beware: if the name of the default branch of the terminologit repo is used in the html repo as a not default branch, this will fail
+    - cd ./termgit-html-project
+    - git checkout $CI_COMMIT_BRANCH || true
+    - cd ..
+
+    # copy current IG output to termgit-html-project/output in order to persist IG output
+    - echo "Copy output to termgit-html-project/output"
+    - mkdir -pv ./termgit-html-project/output/
+    # the output will be attached to the already existing content
+    # just the artifacts file has to be deleted from the newly generated IG in order to use the old one, that will get handeld in a future fixed issue
+    - rm -vf ./output/artifacts.html ./output/toc.html
+    - cp -rvf ./output/* ./termgit-html-project/output/
+
+    # change into directory of old IG output
+    - echo "change to termgit-html-project"
+    - echo "pwd $PWD"
+    - cd termgit-html-project
+    - echo "pwd $PWD"
+
+    # commit and push changes
+    - git add -A
+    - git commit -m "${AUTOMATIC_COMMIT_PREFIX} update IG output" -m "$CI_COMMIT_MESSAGE"
+
+    # if the CI_DEFAULT_BRANCH in the project we are now is used, push to TERMGIT_HTML_PROJECT_DEFAULT_BRANCH branch
+    # else push to a new or maybe already exisiting branch to the HTML_PROJECT, named the same as the branch here in this project we are now
+    - > # start shell variable with yaml multiline block
+      if [ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]; then
+        git push "https://${GITLAB_USER_LOGIN}:${GITLAB_CI_TOKEN}@gitlab.com/${TERMGIT_HTML_PROJECT}.git" HEAD:${TERMGIT_HTML_PROJECT_DEFAULT_BRANCH}
+      else
+        git push "https://${GITLAB_USER_LOGIN}:${GITLAB_CI_TOKEN}@gitlab.com/${TERMGIT_HTML_PROJECT}.git" HEAD:${CI_COMMIT_BRANCH}
+      fi
+
+    - echo "FINISHED UPDATE ${TERMGIT_HTML_PROJECT}"
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  artifacts:
+    paths:
+      - termgit-html-project/output/
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+############################
+#
+# Job publishes the pages.
+#
+############################
+pages:
+  tags:
+    - $RUNNER_TAG
+  stage: publish
+
+  rules:
+    # job will run
+    # - if it is a commit on a branch (not for a tag)
+    # - AND if commit title does NOT start with "AUTOMATIC_COMMIT"
+    # - OR
+    # - if it has been triggered by another pipeline
+    # - AND if $MALAC_CT_PROJECT_BRANCH has been set
+    - if: ($CI_COMMIT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/) || ($CI_PIPELINE_SOURCE == "pipeline" && $MALAC_CT_PROJECT_BRANCH)
+
+  script:
+    # move output to gilab-pages, for integration tests the else block will trigger
+    - > # start shell variable with yaml multiline block
+      if [ -d "./termgit-html-project/output" ]; then
+        mv ./termgit-html-project/output ./public
+      else
+        mv ./output ./public
+      fi
+
+    - echo "${CI_JOB_NAME} has finished"
+
+  artifacts:
+    paths:
+      - public
+    # artifacts will expire in 1 week (storage reasons)
+    # for production environment it is recommended to check https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#keep-artifacts-from-most-recent-successful-jobs -> save the artifacts of the last successful pipeline regardless of expire_in
+    expire_in: 1 week
+
+  retry: 2
+
+############################
+#
+# Job publishes the resources in the input/resources folder to the given fhir server.
+#
+############################
+upload_input_resources:
+  tags:
+    - $RUNNER_TAG
+  stage: publish
+
+  # TODO look for a slim image with python
+  image: elgagmbh/fsh-ing-grounds
+
+  rules:
+    # job will only run if $UPLOAD_ARTIFACTS has been set to true and additionally
+    # - the $CI_COMMIT_BRANCH is the same as the $CI_DEFAULT_BRANCH
+    # - OR
+    # - $UPLOAD_ARTIFACTS_ALL_BRANCHES is set to true
+    - if: $CI_COMMIT_BRANCH && $CI_COMMIT_TITLE !~ /^AUTOMATIC_COMMIT.*/ && $UPLOAD_ARTIFACTS == "true" && ($CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $UPLOAD_ARTIFACTS_ALL_BRANCHES == "true")
+
+  script:
+    # move output to gilab-pages:
+    - python upload_input_resources.py
+
+  retry: 2

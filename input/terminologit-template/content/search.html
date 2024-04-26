@@ -1,0 +1,14 @@
+---
+---
+{% include fragment-pagebegin-search.html %}
+<div class="col-12">
+  <div class="alert alert-warning" role="alert">
+    <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  </div>
+  <a name="root"> </a>
+  <h2 id="root">Search: {{site.data.fhir.ig.title}}</h2>
+
+  <iframe src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical}}&amp;prefill=Search {{site.data.fhir.ig.title}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+
+</div>
+{% include fragment-pageend.html %}

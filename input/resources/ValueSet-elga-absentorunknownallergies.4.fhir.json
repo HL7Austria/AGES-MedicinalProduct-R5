@@ -1,0 +1,145 @@
+{
+  "resourceType": "ValueSet",
+  "id": "elga-absentorunknownallergies",
+  "url": "https://termgit.elga.gv.at/ValueSet/elga-absentorunknownallergies",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.2.40.0.34.10.178"
+    }
+  ],
+  "version": "3.0.0+20231122",
+  "name": "elga-absentorunknownallergies",
+  "title": "ELGA_AbsentOrUnknownAllergies",
+  "status": "active",
+  "date": "2023-11-22",
+  "description": "**Description:** Absent Allergy Or Intolerance \n\n**Beschreibung:** Keine Allergie oder Intoleranz",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+        "version": "1.1.0",
+        "concept": [
+          {
+            "code": "no-allergy-info",
+            "display": "No information about allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Information \u00fcber \u00dcberempfindlichkeiten verf\u00fcgbar"
+              }
+            ]
+          },
+          {
+            "code": "no-known-allergies",
+            "display": "No known allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine \u00dcberempfindlichkeiten"
+              }
+            ]
+          },
+          {
+            "code": "no-known-medication-allergies",
+            "display": "No known medication allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Arzneimittelallergien"
+              }
+            ]
+          },
+          {
+            "code": "no-known-environmental-allergies",
+            "display": "No known environmental allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Umweltallergien"
+              }
+            ]
+          },
+          {
+            "code": "no-known-food-allergies",
+            "display": "No known food allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Lebensmittelallergien"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2023-11-23T13:49:27+00:00",
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+        "version": "1.1.0",
+        "code": "no-allergy-info",
+        "display": "No information about allergies",
+        "designation": [
+          {
+            "language": "de-AT",
+            "value": "keine Information \u00fcber \u00dcberempfindlichkeiten verf\u00fcgbar"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+        "version": "1.1.0",
+        "code": "no-known-allergies",
+        "display": "No known allergies",
+        "designation": [
+          {
+            "language": "de-AT",
+            "value": "keine \u00dcberempfindlichkeiten"
+          }
+        ],
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+            "version": "1.1.0",
+            "code": "no-known-medication-allergies",
+            "display": "No known medication allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Arzneimittelallergien"
+              }
+            ]
+          },
+          {
+            "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+            "version": "1.1.0",
+            "code": "no-known-environmental-allergies",
+            "display": "No known environmental allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Umweltallergien"
+              }
+            ]
+          },
+          {
+            "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+            "version": "1.1.0",
+            "code": "no-known-food-allergies",
+            "display": "No known food allergies",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "keine Lebensmittelallergien"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

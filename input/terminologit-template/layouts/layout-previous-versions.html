@@ -1,0 +1,23 @@
+---
+---
+{% include fragment-pagebegin.html %}
+
+<script src="{{site.data.info.assets}}assets/js/version-diff.js"></script>
+
+<!-- counter for page numbering -->
+<div style="counter-reset: section 2" class="col-12">
+  {% include fragment-base-navtabs-terminology.html type='{{[type]}}' id='{{[id]}}' active='previous-versions' %}
+
+  <a name="root"> </a>
+  <h2 id="root">: {{site.data.pages[page.path].title}}</h2>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
+
+  <!--COMMENTED-PREVIOUS-VERSION-INCLUDE {% include {{[type]}}-{{[id]}}-previous-versions.xhtml %} COMMENTED-PREVIOUS-VERSION-INCLUDE-->
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' %}
+
+</div>
+{% include fragment-pageend.html %}

@@ -1,0 +1,1 @@
+cp -v ./input/images-source/test.plantuml ./input/images-source/test.xhtml

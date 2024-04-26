@@ -1,0 +1,1082 @@
+On branch test-ig-publisher
+Your branch is up to date with 'origin/test-ig-publisher'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   input/includes/CodeSystem-appc-anatomie-download.xhtml
+	modified:   input/includes/CodeSystem-appc-anatomie-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-appc-lateralitaet-download.xhtml
+	modified:   input/includes/CodeSystem-appc-lateralitaet-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-appc-modalitaet-download.xhtml
+	modified:   input/includes/CodeSystem-appc-modalitaet-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-appc-prozeduren-download.xhtml
+	modified:   input/includes/CodeSystem-appc-prozeduren-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-asp-liste-download.xhtml
+	modified:   input/includes/CodeSystem-asp-liste-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-atc-deutsch-wido-download.xhtml
+	modified:   input/includes/CodeSystem-atc-deutsch-wido-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-austrian-designation-use-download.xhtml
+	new file:   input/includes/CodeSystem-austrian-designation-use-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-bmg-icd-10-2022-download.xhtml
+	new file:   input/includes/CodeSystem-bmg-icd-10-2022-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-bmg-lkf-2023-download.xhtml
+	new file:   input/includes/CodeSystem-bmg-lkf-2023-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-dcm-download.xhtml
+	modified:   input/includes/CodeSystem-dcm-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-dgc-antibody-test-download.xhtml
+	modified:   input/includes/CodeSystem-dgc-antibody-test-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-dgc-qr-download.xhtml
+	modified:   input/includes/CodeSystem-dgc-qr-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-dgc-ratnamemanufacturer-download.xhtml
+	modified:   input/includes/CodeSystem-dgc-ratnamemanufacturer-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-dicom-sopclasses-download.xhtml
+	modified:   input/includes/CodeSystem-dicom-sopclasses-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-eimpf-ergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-eimpf-ergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-eimpf-historischeimpfstoffe-download.xhtml
+	modified:   input/includes/CodeSystem-eimpf-historischeimpfstoffe-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-eimpf-impfstoffe-download.xhtml
+	modified:   input/includes/CodeSystem-eimpf-impfstoffe-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-eimpf-schemamatrix-download.xhtml
+	modified:   input/includes/CodeSystem-eimpf-schemamatrix-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-eimpf-zuordnungsmatrix-download.xhtml
+	modified:   input/includes/CodeSystem-eimpf-zuordnungsmatrix-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-actcode-download.xhtml
+	modified:   input/includes/CodeSystem-elga-actcode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-allergietyp-download.xhtml
+	modified:   input/includes/CodeSystem-elga-allergietyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventid-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventid-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventtype-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventtype-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventtypea-arr-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditeventtypea-arr-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjectidtype-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjectidtype-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjecttype-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjecttype-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjecttyperole-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditparticipantobjecttyperole-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-auditsourcetype-download.xhtml
+	modified:   input/includes/CodeSystem-elga-auditsourcetype-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-e-health-anwendungen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-e-health-anwendungen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-entlassungsmanagementart-download.xhtml
+	modified:   input/includes/CodeSystem-elga-entlassungsmanagementart-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-ergaenzungsliste-download.xhtml
+	modified:   input/includes/CodeSystem-elga-ergaenzungsliste-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-fachaerzte-download.xhtml
+	modified:   input/includes/CodeSystem-elga-fachaerzte-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-formatcode-download.xhtml
+	modified:   input/includes/CodeSystem-elga-formatcode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-formatcodezusatz-download.xhtml
+	modified:   input/includes/CodeSystem-elga-formatcodezusatz-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-funktionsrollen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-funktionsrollen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-gda-aggregatrollen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-gda-aggregatrollen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-gtelvogdarollen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-gtelvogdarollen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-kontakttypen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-kontakttypen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-laborparameterergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-elga-laborparameterergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-lebensmittelallergene-download.xhtml
+	modified:   input/includes/CodeSystem-elga-lebensmittelallergene-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-mammogramassessment-download.xhtml
+	modified:   input/includes/CodeSystem-elga-mammogramassessment-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-medikationmengenartalternativ-download.xhtml
+	modified:   input/includes/CodeSystem-elga-medikationmengenartalternativ-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-patienten-identifizierungsmethoden-download.xhtml
+	modified:   input/includes/CodeSystem-elga-patienten-identifizierungsmethoden-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-pflegestufen-download.xhtml
+	modified:   input/includes/CodeSystem-elga-pflegestufen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-practicesetting-download.xhtml
+	modified:   input/includes/CodeSystem-elga-practicesetting-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-sections-download.xhtml
+	modified:   input/includes/CodeSystem-elga-sections-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-serviceeventsentlassbrief-download.xhtml
+	modified:   input/includes/CodeSystem-elga-serviceeventsentlassbrief-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-significantpathogens-download.xhtml
+	modified:   input/includes/CodeSystem-elga-significantpathogens-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-specimentype-ergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-elga-specimentype-ergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-elga-urlschemeergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-elga-urlschemeergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-analysedetails-download.xhtml
+	modified:   input/includes/CodeSystem-ems-analysedetails-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-antigenh-download.xhtml
+	modified:   input/includes/CodeSystem-ems-antigenh-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-antigeno-download.xhtml
+	modified:   input/includes/CodeSystem-ems-antigeno-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-artmalaria-download.xhtml
+	modified:   input/includes/CodeSystem-ems-artmalaria-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-artquartier-download.xhtml
+	modified:   input/includes/CodeSystem-ems-artquartier-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-aviditaet-download.xhtml
+	modified:   input/includes/CodeSystem-ems-aviditaet-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-befundart-download.xhtml
+	modified:   input/includes/CodeSystem-ems-befundart-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-betreuung-download.xhtml
+	modified:   input/includes/CodeSystem-ems-betreuung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-biotyp-biovar-download.xhtml
+	modified:   input/includes/CodeSystem-ems-biotyp-biovar-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-durchgefuehrt-download.xhtml
+	modified:   input/includes/CodeSystem-ems-durchgefuehrt-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-ergaenzungmeldepflichtigekrankheiten-download.xhtml
+	modified:   input/includes/CodeSystem-ems-ergaenzungmeldepflichtigekrankheiten-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-ergebnis-download.xhtml
+	modified:   input/includes/CodeSystem-ems-ergebnis-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-genogruppe-download.xhtml
+	modified:   input/includes/CodeSystem-ems-genogruppe-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyp-download.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyppora-r1-download.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyppora-r1-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyppora-r2-download.xhtml
+	modified:   input/includes/CodeSystem-ems-genotyppora-r2-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-gewinnung-download.xhtml
+	modified:   input/includes/CodeSystem-ems-gewinnung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-hcv-rna-download.xhtml
+	modified:   input/includes/CodeSystem-ems-hcv-rna-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-janein-download.xhtml
+	modified:   input/includes/CodeSystem-ems-janein-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-klinischemanifestation-download.xhtml
+	modified:   input/includes/CodeSystem-ems-klinischemanifestation-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-krankheitsmerkmale-download.xhtml
+	modified:   input/includes/CodeSystem-ems-krankheitsmerkmale-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-listeschulen-download.xhtml
+	modified:   input/includes/CodeSystem-ems-listeschulen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-material-download.xhtml
+	modified:   input/includes/CodeSystem-ems-material-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-materialmethode-download.xhtml
+	modified:   input/includes/CodeSystem-ems-materialmethode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-methoden-download.xhtml
+	modified:   input/includes/CodeSystem-ems-methoden-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-monoclonalsub-download.xhtml
+	modified:   input/includes/CodeSystem-ems-monoclonalsub-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-multilocsequ-download.xhtml
+	modified:   input/includes/CodeSystem-ems-multilocsequ-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-nachweis-download.xhtml
+	modified:   input/includes/CodeSystem-ems-nachweis-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-nachweisbar-download.xhtml
+	modified:   input/includes/CodeSystem-ems-nachweisbar-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-organ-download.xhtml
+	modified:   input/includes/CodeSystem-ems-organ-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-orth20probe-download.xhtml
+	modified:   input/includes/CodeSystem-ems-orth20probe-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-parameter-download.xhtml
+	modified:   input/includes/CodeSystem-ems-parameter-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-phagentyp-download.xhtml
+	modified:   input/includes/CodeSystem-ems-phagentyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-phagentyp-vtec-download.xhtml
+	modified:   input/includes/CodeSystem-ems-phagentyp-vtec-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-posneg-download.xhtml
+	modified:   input/includes/CodeSystem-ems-posneg-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-quartiercode-download.xhtml
+	modified:   input/includes/CodeSystem-ems-quartiercode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-reiseland-download.xhtml
+	modified:   input/includes/CodeSystem-ems-reiseland-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-ribotype-download.xhtml
+	modified:   input/includes/CodeSystem-ems-ribotype-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-serogruppe-download.xhtml
+	modified:   input/includes/CodeSystem-ems-serogruppe-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-serotyp-download.xhtml
+	modified:   input/includes/CodeSystem-ems-serotyp-gene-feta-download.xhtml
+	modified:   input/includes/CodeSystem-ems-serotyp-gene-feta-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-serotyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-resistenzergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-resistenzergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-resultat-download.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-resultat-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-typ-download.xhtml
+	modified:   input/includes/CodeSystem-ems-tbc-typ-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-testmethodemic-ipd-download.xhtml
+	modified:   input/includes/CodeSystem-ems-testmethodemic-ipd-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-testmethodetypingipd-download.xhtml
+	modified:   input/includes/CodeSystem-ems-testmethodetypingipd-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-verotoxin-1-subtyp-download.xhtml
+	modified:   input/includes/CodeSystem-ems-verotoxin-1-subtyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-verotoxin-2-subtyp-download.xhtml
+	modified:   input/includes/CodeSystem-ems-verotoxin-2-subtyp-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-wowurdekrankheiterworben-download.xhtml
+	modified:   input/includes/CodeSystem-ems-wowurdekrankheiterworben-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-ems-wurdekrankheitimportiert-download.xhtml
+	modified:   input/includes/CodeSystem-ems-wurdekrankheitimportiert-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ems-yersinapathogen-download.xhtml
+	modified:   input/includes/CodeSystem-ems-yersinapathogen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-exnds-concepts-download.xhtml
+	modified:   input/includes/CodeSystem-exnds-concepts-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-exnds-formatcodes-download.xhtml
+	modified:   input/includes/CodeSystem-exnds-formatcodes-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-exnds-metadaten-download.xhtml
+	modified:   input/includes/CodeSystem-exnds-metadaten-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-exnds-sections-download.xhtml
+	modified:   input/includes/CodeSystem-exnds-sections-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-gda-attribute-download.xhtml
+	modified:   input/includes/CodeSystem-gda-attribute-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-gda-org-download.xhtml
+	modified:   input/includes/CodeSystem-gda-org-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-geschlechtercodes-iso-iec-5218-download.xhtml
+	modified:   input/includes/CodeSystem-geschlechtercodes-iso-iec-5218-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-act-code-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-act-code-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-act-site-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-act-site-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-actstatus-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-actstatus-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-address-use-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-address-use-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-administrative-gender-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-administrative-gender-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-administrative-sex-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-administrative-sex-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-at-formatcodes-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-at-formatcodes-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-at-religionaustria-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-at-religionaustria-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-confidentiality-code-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-confidentiality-code-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-mode-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-mode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-status-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-status-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-type-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-consent-type-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-entity-name-part-qualifier-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-entity-name-part-qualifier-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-entity-name-use-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-entity-name-use-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-konformitaet-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-konformitaet-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-language-identification-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-language-identification-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-languageabilitymode-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-languageabilitymode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-marital-status-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-marital-status-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-null-flavor-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-null-flavor-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-observation-interpretation-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-observation-interpretation-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-participation-function-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-participation-function-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-participation-type-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-participation-type-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-proficiencylevelcode-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-proficiencylevelcode-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-role-class-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-role-class-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-role-code-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-role-code-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-signatorys-relationship-to-subject-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-signatorys-relationship-to-subject-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-specimen-type-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-specimen-type-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-timing-event-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-timing-event-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-hl7-urlscheme-download.xhtml
+	modified:   input/includes/CodeSystem-hl7-urlscheme-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-iana-mime-type-download.xhtml
+	modified:   input/includes/CodeSystem-iana-mime-type-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2014-download.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2014-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2017-download.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2017-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2020-download.xhtml
+	modified:   input/includes/CodeSystem-icd-10-bmg-2020-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icd-o-3-download.xhtml
+	modified:   input/includes/CodeSystem-icd-o-3-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icf-download.xhtml
+	modified:   input/includes/CodeSystem-icf-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-icpc-32-en-download.xhtml
+	new file:   input/includes/CodeSystem-icpc-32-en-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-icpc2-download.xhtml
+	modified:   input/includes/CodeSystem-icpc2-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ihe-pharmaceutical-advice-status-list-download.xhtml
+	modified:   input/includes/CodeSystem-ihe-pharmaceutical-advice-status-list-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ips-absentorunknowndata-download.xhtml
+	modified:   input/includes/CodeSystem-ips-absentorunknowndata-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ips-conditionclinicalstatuscodes-download.xhtml
+	modified:   input/includes/CodeSystem-ips-conditionclinicalstatuscodes-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ips-conditionverificationstatus-download.xhtml
+	modified:   input/includes/CodeSystem-ips-conditionverificationstatus-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-iso-3166-1-alpha-3-download.xhtml
+	modified:   input/includes/CodeSystem-iso-3166-1-alpha-3-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-iso-3166-alpha-2-code-download.xhtml
+	modified:   input/includes/CodeSystem-iso-3166-alpha-2-code-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-iso-639-2-download.xhtml
+	modified:   input/includes/CodeSystem-iso-639-2-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-ambulant-download.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-ambulant-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-gesamt-download.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-gesamt-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-stationaer-download.xhtml
+	modified:   input/includes/CodeSystem-leistungskatalog-stationaer-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-art-download.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-art-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-statauf-download.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-statauf-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-typ-download.xhtml
+	modified:   input/includes/CodeSystem-lkf-diagnose-typ-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-lkf-ergaenzung-download.xhtml
+	modified:   input/includes/CodeSystem-lkf-ergaenzung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-mdc-medicaldevicecommunications-download.xhtml
+	modified:   input/includes/CodeSystem-mdc-medicaldevicecommunications-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikation-ages-wirkstoffe-download.xhtml
+	modified:   input/includes/CodeSystem-medikation-ages-wirkstoffe-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-medikation-darreichungsform-download.xhtml
+	new file:   input/includes/CodeSystem-medikation-darreichungsform-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikationartanwendung-download.xhtml
+	modified:   input/includes/CodeSystem-medikationartanwendung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikationdarreichungsform-download.xhtml
+	modified:   input/includes/CodeSystem-medikationdarreichungsform-previous-versions.xhtml
+	new file:   input/includes/CodeSystem-medikationpackaging-download.xhtml
+	new file:   input/includes/CodeSystem-medikationpackaging-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikationrezeptart-download.xhtml
+	modified:   input/includes/CodeSystem-medikationrezeptart-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikationrezeptpflichtstatus-download.xhtml
+	modified:   input/includes/CodeSystem-medikationrezeptpflichtstatus-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-medikationtherapieart-download.xhtml
+	modified:   input/includes/CodeSystem-medikationtherapieart-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-additivfach-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-additivfach-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-berechtigungen-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-berechtigungen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-fachrichtung-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-fachrichtung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-spezialdiplom-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-spezialdiplom-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-spezialisierung-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-spezialisierung-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-oeaek-zertifikate-download.xhtml
+	modified:   input/includes/CodeSystem-oeaek-zertifikate-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-rast-klassen-download.xhtml
+	modified:   input/includes/CodeSystem-rast-klassen-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-sciphox-diagnosenzusatz-download.xhtml
+	modified:   input/includes/CodeSystem-sciphox-diagnosenzusatz-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-sciphox-seitenlokalisation-download.xhtml
+	modified:   input/includes/CodeSystem-sciphox-seitenlokalisation-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-snomed-ct-auszug-download.xhtml
+	modified:   input/includes/CodeSystem-snomed-ct-auszug-previous-versions.xhtml
+	modified:   input/includes/CodeSystem-ucum-download.xhtml
+	modified:   input/includes/CodeSystem-ucum-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-appc-anatomie-4-appc-anatomie-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-appc-anatomie-4-appc-anatomie-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-dgc-ratnamemanufacturer-4-dgc-ratnamemanufacturer-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-dgc-ratnamemanufacturer-4-dgc-ratnamemanufacturer-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-eimpf-ergaenzung-4-eimpf-immunizationtarget-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-eimpf-ergaenzung-4-eimpf-immunizationtarget-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-eimpf-ergaenzung-4-eimpf-impfschema-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-eimpf-ergaenzung-4-eimpf-impfschema-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-elga-formatcode-4-elga-formatcode-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-elga-formatcode-4-elga-formatcode-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-elga-laborparameterergaenzun-4-elga-laborparameter-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-elga-laborparameterergaenzun-4-elga-laborparameter-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-eimpf-antikoerperbestimmung-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-eimpf-antikoerperbestimmung-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-elga-dokumentenklassen-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-elga-dokumentenklassen-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-elga-laborparameter-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-loinc-4-elga-laborparameter-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-medikation-ages-wirkstoffe-4-elga-wirkstoffe-ages-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-medikation-ages-wirkstoffe-4-elga-wirkstoffe-ages-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-antikoerperbestimmung-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-antikoerperbestimmung-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-immunizationtarget-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-immunizationtarget-previous-versions.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-impfrelevanteerkranku-download.xhtml
+	deleted:    input/includes/CodeSystem-zuppl-snomed-ct-auszug-4-eimpf-impfrelevanteerkranku-previous-versions.xhtml
+	modified:   input/includes/ValueSet-appc-anatomie-download.xhtml
+	modified:   input/includes/ValueSet-appc-anatomie-previous-versions.xhtml
+	modified:   input/includes/ValueSet-appc-lateralitaet-download.xhtml
+	modified:   input/includes/ValueSet-appc-lateralitaet-previous-versions.xhtml
+	modified:   input/includes/ValueSet-appc-modalitaet-download.xhtml
+	modified:   input/includes/ValueSet-appc-modalitaet-previous-versions.xhtml
+	modified:   input/includes/ValueSet-appc-prozeduren-download.xhtml
+	modified:   input/includes/ValueSet-appc-prozeduren-previous-versions.xhtml
+	new file:   input/includes/ValueSet-atcdabbr-lateralityqualifiercode-download.xhtml
+	new file:   input/includes/ValueSet-atcdabbr-lateralityqualifiercode-previous-versions.xhtml
+	new file:   input/includes/ValueSet-atcdabbr-noinformationqualifier-download.xhtml
+	new file:   input/includes/ValueSet-atcdabbr-noinformationqualifier-previous-versions.xhtml
+	new file:   input/includes/ValueSet-austrian-designation-use-download.xhtml
+	new file:   input/includes/ValueSet-austrian-designation-use-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-country-download.xhtml
+	modified:   input/includes/ValueSet-dgc-country-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-diseaseoragent-download.xhtml
+	modified:   input/includes/ValueSet-dgc-diseaseoragent-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-doses-download.xhtml
+	modified:   input/includes/ValueSet-dgc-doses-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-medicinalproduct-download.xhtml
+	modified:   input/includes/ValueSet-dgc-medicinalproduct-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-ratnamemanufacturer-download.xhtml
+	modified:   input/includes/ValueSet-dgc-ratnamemanufacturer-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-resultofthetest-download.xhtml
+	modified:   input/includes/ValueSet-dgc-resultofthetest-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-typeoftest-download.xhtml
+	modified:   input/includes/ValueSet-dgc-typeoftest-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-vaccine-download.xhtml
+	modified:   input/includes/ValueSet-dgc-vaccine-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dgc-vaccinemarketingauthorizationholder-download.xhtml
+	modified:   input/includes/ValueSet-dgc-vaccinemarketingauthorizationholder-previous-versions.xhtml
+	modified:   input/includes/ValueSet-dicom-sopclasses-download.xhtml
+	modified:   input/includes/ValueSet-dicom-sopclasses-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-antikoerperbestimmung-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-antikoerperbestimmung-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-historischeimpfstoffe-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-historischeimpfstoffe-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-immunizationtarget-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-immunizationtarget-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfdosis-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfdosis-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfgrund-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfgrund-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfrelevanteerkrankung-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfrelevanteerkrankung-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfrollen-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfrollen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfschema-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfschema-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfstoffe-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-impfstoffe-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-mengenart-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-mengenart-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-specialcasevaccination-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-specialcasevaccination-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-specialsituationindication-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-specialsituationindication-previous-versions.xhtml
+	modified:   input/includes/ValueSet-eimpf-zusatzklassifikation-download.xhtml
+	modified:   input/includes/ValueSet-eimpf-zusatzklassifikation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-absentorunknownallergies-download.xhtml
+	modified:   input/includes/ValueSet-elga-absentorunknownallergies-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknowndevices-download.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknowndevices-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownmedication-download.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownmedication-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownproblems-download.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownproblems-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownprocedures-download.xhtml
+	new file:   input/includes/ValueSet-elga-absentorunknownprocedures-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-actcode-abginfo-download.xhtml
+	modified:   input/includes/ValueSet-elga-actcode-abginfo-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-actcode-patinfo-download.xhtml
+	modified:   input/includes/ValueSet-elga-actcode-patinfo-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-actencountercode-download.xhtml
+	modified:   input/includes/ValueSet-elga-actencountercode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-addressuse-download.xhtml
+	modified:   input/includes/ValueSet-elga-addressuse-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-administrativegender-download.xhtml
+	modified:   input/includes/ValueSet-elga-administrativegender-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-alcoholconsumption-download.xhtml
+	new file:   input/includes/ValueSet-elga-alcoholconsumption-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-allergietyp-download.xhtml
+	modified:   input/includes/ValueSet-elga-allergietyp-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-allergyorintoleranceagent-download.xhtml
+	modified:   input/includes/ValueSet-elga-allergyorintoleranceagent-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-allergyorintolerancetype-download.xhtml
+	modified:   input/includes/ValueSet-elga-allergyorintolerancetype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-allergyreaction-download.xhtml
+	modified:   input/includes/ValueSet-elga-allergyreaction-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-allergystatuscode-download.xhtml
+	modified:   input/includes/ValueSet-elga-allergystatuscode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-anamneselabormikrobiologie-download.xhtml
+	modified:   input/includes/ValueSet-elga-anamneselabormikrobiologie-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-antibiogramm-download.xhtml
+	modified:   input/includes/ValueSet-elga-antibiogramm-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-artderdiagnose-download.xhtml
+	modified:   input/includes/ValueSet-elga-artderdiagnose-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventid-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventid-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventtype-a-arr-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventtype-a-arr-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventtype-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditeventtype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjectidtype-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjectidtype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjecttype-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjecttype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjecttyperole-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditparticipantobjecttyperole-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditroleid-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditroleid-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-auditsourcetype-download.xhtml
+	modified:   input/includes/ValueSet-elga-auditsourcetype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-authorspeciality-download.xhtml
+	modified:   input/includes/ValueSet-elga-authorspeciality-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-conditionstatuscode-download.xhtml
+	modified:   input/includes/ValueSet-elga-conditionstatuscode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-conditionverificationstatus-download.xhtml
+	modified:   input/includes/ValueSet-elga-conditionverificationstatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-confidentiality-download.xhtml
+	modified:   input/includes/ValueSet-elga-confidentiality-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-criticalityobservationvalue-download.xhtml
+	modified:   input/includes/ValueSet-elga-criticalityobservationvalue-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-currentsmokingstatus-download.xhtml
+	new file:   input/includes/ValueSet-elga-currentsmokingstatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-diagnosesicherheit-download.xhtml
+	modified:   input/includes/ValueSet-elga-diagnosesicherheit-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-dokumentenklassen-download.xhtml
+	modified:   input/includes/ValueSet-elga-dokumentenklassen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-dosisparameter-download.xhtml
+	modified:   input/includes/ValueSet-elga-dosisparameter-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-einnahmezeitpunkte-download.xhtml
+	modified:   input/includes/ValueSet-elga-einnahmezeitpunkte-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-entitynamepartqualifier-download.xhtml
+	modified:   input/includes/ValueSet-elga-entitynamepartqualifier-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-entitynameuse-download.xhtml
+	modified:   input/includes/ValueSet-elga-entitynameuse-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-entlassungsmanagementa-download.xhtml
+	modified:   input/includes/ValueSet-elga-entlassungsmanagementa-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-expecteddeliverydatemethod-download.xhtml
+	new file:   input/includes/ValueSet-elga-expecteddeliverydatemethod-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-formatcode-download.xhtml
+	modified:   input/includes/ValueSet-elga-formatcode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-formatcodezusatz-download.xhtml
+	modified:   input/includes/ValueSet-elga-formatcodezusatz-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-healthcarefacilitytypecode-download.xhtml
+	modified:   input/includes/ValueSet-elga-healthcarefacilitytypecode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-humanactsite-download.xhtml
+	modified:   input/includes/ValueSet-elga-humanactsite-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-humanlanguage-download.xhtml
+	modified:   input/includes/ValueSet-elga-humanlanguage-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-informationrecipienttype-download.xhtml
+	modified:   input/includes/ValueSet-elga-informationrecipienttype-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-insuredassocentity-download.xhtml
+	modified:   input/includes/ValueSet-elga-insuredassocentity-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-kulturerregernachweis-download.xhtml
+	modified:   input/includes/ValueSet-elga-kulturerregernachweis-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-laborparameter-download.xhtml
+	modified:   input/includes/ValueSet-elga-laborparameter-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-laborstruktur-download.xhtml
+	modified:   input/includes/ValueSet-elga-laborstruktur-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-laendercodes-download.xhtml
+	modified:   input/includes/ValueSet-elga-laendercodes-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-languageabilitymode-download.xhtml
+	modified:   input/includes/ValueSet-elga-languageabilitymode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-languagecode-download.xhtml
+	modified:   input/includes/ValueSet-elga-languagecode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-lebensmittelallergene-download.xhtml
+	modified:   input/includes/ValueSet-elga-lebensmittelallergene-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-mammogramassessment-download.xhtml
+	modified:   input/includes/ValueSet-elga-mammogramassessment-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-maritalstatus-download.xhtml
+	modified:   input/includes/ValueSet-elga-maritalstatus-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-medicaldevices-download.xhtml
+	new file:   input/includes/ValueSet-elga-medicaldevices-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medientyp-download.xhtml
+	modified:   input/includes/ValueSet-elga-medientyp-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-medikation-darreichungsform-download.xhtml
+	new file:   input/includes/ValueSet-elga-medikation-darreichungsform-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationabgabeart-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationabgabeart-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationartanwendung-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationartanwendung-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationdarreichungsform-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationdarreichungsform-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationfrequenz-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationfrequenz-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationmengenart-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationmengenart-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationmengenartalternativ-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationmengenartalternativ-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationpharmazeutischeempfehlungstatus-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationpharmazeutischeempfehlungstatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationrezeptart-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationrezeptart-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationrezeptpflichtstatus-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationrezeptpflichtstatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-medikationtherapieart-download.xhtml
+	modified:   input/includes/ValueSet-elga-medikationtherapieart-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-mikroorganismen-download.xhtml
+	modified:   input/includes/ValueSet-elga-mikroorganismen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-nachweisergebnis-download.xhtml
+	modified:   input/includes/ValueSet-elga-nachweisergebnis-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-noinformation-download.xhtml
+	modified:   input/includes/ValueSet-elga-noinformation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-nullflavor-download.xhtml
+	modified:   input/includes/ValueSet-elga-nullflavor-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-observationinterpretation-download.xhtml
+	modified:   input/includes/ValueSet-elga-observationinterpretation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-participationfunctioncode-download.xhtml
+	modified:   input/includes/ValueSet-elga-participationfunctioncode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-personalrelationship-download.xhtml
+	modified:   input/includes/ValueSet-elga-personalrelationship-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-practicesetting-download.xhtml
+	modified:   input/includes/ValueSet-elga-practicesetting-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-pregnanciessummary-download.xhtml
+	new file:   input/includes/ValueSet-elga-pregnanciessummary-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-pregnancystatus-download.xhtml
+	new file:   input/includes/ValueSet-elga-pregnancystatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-probenmaterial-download.xhtml
+	modified:   input/includes/ValueSet-elga-probenmaterial-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-problemarten-download.xhtml
+	modified:   input/includes/ValueSet-elga-problemarten-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-problemkataloge-download.xhtml
+	modified:   input/includes/ValueSet-elga-problemkataloge-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-problemseverity-download.xhtml
+	modified:   input/includes/ValueSet-elga-problemseverity-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-problemstatuscode-download.xhtml
+	modified:   input/includes/ValueSet-elga-problemstatuscode-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-procedureapproachsite-download.xhtml
+	new file:   input/includes/ValueSet-elga-procedureapproachsite-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-proficiencylevelcode-download.xhtml
+	modified:   input/includes/ValueSet-elga-proficiencylevelcode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-realmcode-download.xhtml
+	modified:   input/includes/ValueSet-elga-realmcode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-religiousaffiliation-download.xhtml
+	modified:   input/includes/ValueSet-elga-religiousaffiliation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-roleclass-download.xhtml
+	modified:   input/includes/ValueSet-elga-roleclass-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-rollen-download.xhtml
+	modified:   input/includes/ValueSet-elga-rollen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsentlassungaerztl-download.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsentlassungaerztl-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsentlassungpflege-download.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsentlassungpflege-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-sectionspflegesitber-download.xhtml
+	modified:   input/includes/ValueSet-elga-sectionspflegesitber-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsradiologie-download.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsradiologie-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsserviceevents-download.xhtml
+	modified:   input/includes/ValueSet-elga-sectionsserviceevents-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-seitenlokalisation-download.xhtml
+	modified:   input/includes/ValueSet-elga-seitenlokalisation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventperformer-download.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventperformer-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventsentlassbr-download.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventsentlassbr-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventslabor-download.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventslabor-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventstelemonepi-download.xhtml
+	modified:   input/includes/ValueSet-elga-serviceeventstelemonepi-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-significantpathogens-download.xhtml
+	modified:   input/includes/ValueSet-elga-significantpathogens-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-specimentype-download.xhtml
+	modified:   input/includes/ValueSet-elga-specimentype-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-targetsite-download.xhtml
+	new file:   input/includes/ValueSet-elga-targetsite-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-telecomaddressuse-download.xhtml
+	modified:   input/includes/ValueSet-elga-telecomaddressuse-previous-versions.xhtml
+	new file:   input/includes/ValueSet-elga-topographicalmodifierqualifier-download.xhtml
+	new file:   input/includes/ValueSet-elga-topographicalmodifierqualifier-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-typeofproblem-download.xhtml
+	modified:   input/includes/ValueSet-elga-typeofproblem-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-urlscheme-download.xhtml
+	modified:   input/includes/ValueSet-elga-urlscheme-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-vitalparameterarten-download.xhtml
+	modified:   input/includes/ValueSet-elga-vitalparameterarten-previous-versions.xhtml
+	modified:   input/includes/ValueSet-elga-wirkstoffe-ages-download.xhtml
+	modified:   input/includes/ValueSet-elga-wirkstoffe-ages-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-anti-hcv-immunoassay-download.xhtml
+	modified:   input/includes/ValueSet-ems-anti-hcv-immunoassay-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-anti-hcv-immunoblot-assay-download.xhtml
+	modified:   input/includes/ValueSet-ems-anti-hcv-immunoblot-assay-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-betreuung-download.xhtml
+	modified:   input/includes/ValueSet-ems-betreuung-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-hbv-status-download.xhtml
+	modified:   input/includes/ValueSet-ems-hbv-status-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-hcv-core-ag-assay-download.xhtml
+	modified:   input/includes/ValueSet-ems-hcv-core-ag-assay-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-hospitalisierung-download.xhtml
+	modified:   input/includes/ValueSet-ems-hospitalisierung-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-impfstatus-download.xhtml
+	modified:   input/includes/ValueSet-ems-impfstatus-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-klinischemanifestation-download.xhtml
+	modified:   input/includes/ValueSet-ems-klinischemanifestation-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-krankheitsmerkmale-download.xhtml
+	modified:   input/includes/ValueSet-ems-krankheitsmerkmale-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-lebensmittelbedingteintoxikationen-download.xhtml
+	modified:   input/includes/ValueSet-ems-lebensmittelbedingteintoxikationen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-materialmethode-download.xhtml
+	modified:   input/includes/ValueSet-ems-materialmethode-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-meldepflichtige-krankheiten-download.xhtml
+	modified:   input/includes/ValueSet-ems-meldepflichtige-krankheiten-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-reiseland-download.xhtml
+	modified:   input/includes/ValueSet-ems-reiseland-previous-versions.xhtml
+	modified:   input/includes/ValueSet-ems-taetigkeitsbereich-download.xhtml
+	modified:   input/includes/ValueSet-ems-taetigkeitsbereich-previous-versions.xhtml
+	new file:   input/includes/ValueSet-hl7-at-patientidentifier-download.xhtml
+	new file:   input/includes/ValueSet-hl7-at-patientidentifier-previous-versions.xhtml
+	modified:   input/includes/ValueSet-hl7-at-xds-dokumentenklassen-download.xhtml
+	modified:   input/includes/ValueSet-hl7-at-xds-dokumentenklassen-previous-versions.xhtml
+	modified:   input/includes/ValueSet-langid-at-download.xhtml
+	modified:   input/includes/ValueSet-langid-at-previous-versions.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-art-download.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-art-previous-versions.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-statauf-download.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-statauf-previous-versions.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-typ-download.xhtml
+	modified:   input/includes/ValueSet-lkf-diagnose-typ-previous-versions.xhtml
+	deleted:    input/includes/ValueSet-test-versioning-download.xhtml
+	deleted:    input/includes/ValueSet-test-versioning-previous-versions.xhtml
+	new file:   input/includes/ValueSet-v3-EntityCode-download.xhtml
+	new file:   input/includes/ValueSet-v3-EntityCode-previous-versions.xhtml
+	new file:   input/includes/ValueSet-v3-ParticipationType-download.xhtml
+	new file:   input/includes/ValueSet-v3-ParticipationType-previous-versions.xhtml
+	new file:   input/includes/ValueSet-v3-TargetAwareness-download.xhtml
+	new file:   input/includes/ValueSet-v3-TargetAwareness-previous-versions.xhtml
+	modified:   input/includes/ValueSet-zeiteinheiten-download.xhtml
+	modified:   input/includes/ValueSet-zeiteinheiten-previous-versions.xhtml
+	new file:   input/redirects/CodeSystem/appc-lateralitaet.html
+	new file:   input/redirects/CodeSystem/appc-modalitaet.html
+	new file:   input/redirects/CodeSystem/appc-prozeduren.html
+	new file:   input/redirects/CodeSystem/asp-liste.html
+	new file:   input/redirects/CodeSystem/atc-deutsch-wido.html
+	new file:   input/redirects/CodeSystem/austrian-designation-use.html
+	new file:   input/redirects/CodeSystem/bmg-icd-10-2022.html
+	new file:   input/redirects/CodeSystem/bmg-lkf-2023.html
+	new file:   input/redirects/CodeSystem/dcm.html
+	new file:   input/redirects/CodeSystem/dgc-antibody-test.html
+	new file:   input/redirects/CodeSystem/dgc-qr.html
+	new file:   input/redirects/CodeSystem/dgc-ratnamemanufacturer.html
+	new file:   input/redirects/CodeSystem/dicom-sopclasses.html
+	new file:   input/redirects/CodeSystem/eimpf-ergaenzung.html
+	new file:   input/redirects/CodeSystem/eimpf-historischeimpfstoffe.html
+	new file:   input/redirects/CodeSystem/eimpf-impfstoffe.html
+	new file:   input/redirects/CodeSystem/eimpf-schemamatrix.html
+	new file:   input/redirects/CodeSystem/eimpf-zuordnungsmatrix.html
+	new file:   input/redirects/CodeSystem/elga-actcode.html
+	new file:   input/redirects/CodeSystem/elga-allergietyp.html
+	new file:   input/redirects/CodeSystem/elga-auditeventid.html
+	new file:   input/redirects/CodeSystem/elga-auditeventtype.html
+	new file:   input/redirects/CodeSystem/elga-auditeventtypea-arr.html
+	new file:   input/redirects/CodeSystem/elga-auditparticipantobjectidtype.html
+	new file:   input/redirects/CodeSystem/elga-auditparticipantobjecttype.html
+	new file:   input/redirects/CodeSystem/elga-auditparticipantobjecttyperole.html
+	new file:   input/redirects/CodeSystem/elga-auditsourcetype.html
+	new file:   input/redirects/CodeSystem/elga-e-health-anwendungen.html
+	new file:   input/redirects/CodeSystem/elga-entlassungsmanagementart.html
+	new file:   input/redirects/CodeSystem/elga-ergaenzungsliste.html
+	new file:   input/redirects/CodeSystem/elga-fachaerzte.html
+	new file:   input/redirects/CodeSystem/elga-formatcode.html
+	new file:   input/redirects/CodeSystem/elga-formatcodezusatz.html
+	new file:   input/redirects/CodeSystem/elga-funktionsrollen.html
+	new file:   input/redirects/CodeSystem/elga-gda-aggregatrollen.html
+	new file:   input/redirects/CodeSystem/elga-gtelvogdarollen.html
+	new file:   input/redirects/CodeSystem/elga-kontakttypen.html
+	new file:   input/redirects/CodeSystem/elga-laborparameterergaenzung.html
+	new file:   input/redirects/CodeSystem/elga-lebensmittelallergene.html
+	new file:   input/redirects/CodeSystem/elga-mammogramassessment.html
+	new file:   input/redirects/CodeSystem/elga-medikationmengenartalternativ.html
+	new file:   input/redirects/CodeSystem/elga-patienten-identifizierungsmethoden.html
+	new file:   input/redirects/CodeSystem/elga-pflegestufen.html
+	new file:   input/redirects/CodeSystem/elga-practicesetting.html
+	new file:   input/redirects/CodeSystem/elga-sections.html
+	new file:   input/redirects/CodeSystem/elga-serviceeventsentlassbrief.html
+	new file:   input/redirects/CodeSystem/elga-significantpathogens.html
+	new file:   input/redirects/CodeSystem/elga-specimentype-ergaenzung.html
+	new file:   input/redirects/CodeSystem/elga-urlschemeergaenzung.html
+	new file:   input/redirects/CodeSystem/ems-analysedetails.html
+	new file:   input/redirects/CodeSystem/ems-antigenh.html
+	new file:   input/redirects/CodeSystem/ems-antigeno.html
+	new file:   input/redirects/CodeSystem/ems-artmalaria.html
+	new file:   input/redirects/CodeSystem/ems-artquartier.html
+	new file:   input/redirects/CodeSystem/ems-aviditaet.html
+	new file:   input/redirects/CodeSystem/ems-befundart.html
+	new file:   input/redirects/CodeSystem/ems-betreuung.html
+	new file:   input/redirects/CodeSystem/ems-biotyp-biovar.html
+	new file:   input/redirects/CodeSystem/ems-durchgefuehrt.html
+	new file:   input/redirects/CodeSystem/ems-ergaenzungmeldepflichtigekrankheiten.html
+	new file:   input/redirects/CodeSystem/ems-ergebnis.html
+	new file:   input/redirects/CodeSystem/ems-genogruppe.html
+	new file:   input/redirects/CodeSystem/ems-genotyp.html
+	new file:   input/redirects/CodeSystem/ems-genotyppora-r1.html
+	new file:   input/redirects/CodeSystem/ems-genotyppora-r2.html
+	new file:   input/redirects/CodeSystem/ems-gewinnung.html
+	new file:   input/redirects/CodeSystem/ems-hcv-rna.html
+	new file:   input/redirects/CodeSystem/ems-janein.html
+	new file:   input/redirects/CodeSystem/ems-klinischemanifestation.html
+	new file:   input/redirects/CodeSystem/ems-krankheitsmerkmale.html
+	new file:   input/redirects/CodeSystem/ems-listeschulen.html
+	new file:   input/redirects/CodeSystem/ems-material.html
+	new file:   input/redirects/CodeSystem/ems-materialmethode.html
+	new file:   input/redirects/CodeSystem/ems-methoden.html
+	new file:   input/redirects/CodeSystem/ems-monoclonalsub.html
+	new file:   input/redirects/CodeSystem/ems-multilocsequ.html
+	new file:   input/redirects/CodeSystem/ems-nachweis.html
+	new file:   input/redirects/CodeSystem/ems-nachweisbar.html
+	new file:   input/redirects/CodeSystem/ems-organ.html
+	new file:   input/redirects/CodeSystem/ems-orth20probe.html
+	new file:   input/redirects/CodeSystem/ems-parameter.html
+	new file:   input/redirects/CodeSystem/ems-phagentyp-vtec.html
+	new file:   input/redirects/CodeSystem/ems-phagentyp.html
+	new file:   input/redirects/CodeSystem/ems-posneg.html
+	new file:   input/redirects/CodeSystem/ems-quartiercode.html
+	new file:   input/redirects/CodeSystem/ems-reiseland.html
+	new file:   input/redirects/CodeSystem/ems-ribotype.html
+	new file:   input/redirects/CodeSystem/ems-serogruppe.html
+	new file:   input/redirects/CodeSystem/ems-serotyp-gene-feta.html
+	new file:   input/redirects/CodeSystem/ems-serotyp.html
+	new file:   input/redirects/CodeSystem/ems-tbc-resistenzergaenzung.html
+	new file:   input/redirects/CodeSystem/ems-tbc-resultat.html
+	new file:   input/redirects/CodeSystem/ems-tbc-typ.html
+	new file:   input/redirects/CodeSystem/ems-testmethodemic-ipd.html
+	new file:   input/redirects/CodeSystem/ems-testmethodetypingipd.html
+	new file:   input/redirects/CodeSystem/ems-verotoxin-1-subtyp.html
+	new file:   input/redirects/CodeSystem/ems-verotoxin-2-subtyp.html
+	new file:   input/redirects/CodeSystem/ems-wowurdekrankheiterworben.html
+	new file:   input/redirects/CodeSystem/ems-wurdekrankheitimportiert.html
+	new file:   input/redirects/CodeSystem/ems-yersinapathogen.html
+	new file:   input/redirects/CodeSystem/exnds-concepts.html
+	new file:   input/redirects/CodeSystem/exnds-formatcodes.html
+	new file:   input/redirects/CodeSystem/exnds-metadaten.html
+	new file:   input/redirects/CodeSystem/exnds-sections.html
+	new file:   input/redirects/CodeSystem/gda-attribute.html
+	new file:   input/redirects/CodeSystem/gda-org.html
+	new file:   input/redirects/CodeSystem/geschlechtercodes-iso-iec-5218.html
+	new file:   input/redirects/CodeSystem/hl7-act-code.html
+	new file:   input/redirects/CodeSystem/hl7-act-site.html
+	new file:   input/redirects/CodeSystem/hl7-actstatus.html
+	new file:   input/redirects/CodeSystem/hl7-address-use.html
+	new file:   input/redirects/CodeSystem/hl7-administrative-gender.html
+	new file:   input/redirects/CodeSystem/hl7-administrative-sex.html
+	new file:   input/redirects/CodeSystem/hl7-at-formatcodes.html
+	new file:   input/redirects/CodeSystem/hl7-at-religionaustria.html
+	new file:   input/redirects/CodeSystem/hl7-confidentiality-code.html
+	new file:   input/redirects/CodeSystem/hl7-consent-mode.html
+	new file:   input/redirects/CodeSystem/hl7-consent-status.html
+	new file:   input/redirects/CodeSystem/hl7-consent-type.html
+	new file:   input/redirects/CodeSystem/hl7-entity-name-part-qualifier.html
+	new file:   input/redirects/CodeSystem/hl7-entity-name-use.html
+	new file:   input/redirects/CodeSystem/hl7-konformitaet.html
+	new file:   input/redirects/CodeSystem/hl7-language-identification.html
+	new file:   input/redirects/CodeSystem/hl7-languageabilitymode.html
+	new file:   input/redirects/CodeSystem/hl7-marital-status.html
+	new file:   input/redirects/CodeSystem/hl7-null-flavor.html
+	new file:   input/redirects/CodeSystem/hl7-observation-interpretation.html
+	new file:   input/redirects/CodeSystem/hl7-participation-function.html
+	new file:   input/redirects/CodeSystem/hl7-participation-type.html
+	new file:   input/redirects/CodeSystem/hl7-proficiencylevelcode.html
+	new file:   input/redirects/CodeSystem/hl7-role-class.html
+	new file:   input/redirects/CodeSystem/hl7-role-code.html
+	new file:   input/redirects/CodeSystem/hl7-signatorys-relationship-to-subject.html
+	new file:   input/redirects/CodeSystem/hl7-specimen-type.html
+	new file:   input/redirects/CodeSystem/hl7-timing-event.html
+	new file:   input/redirects/CodeSystem/hl7-urlscheme.html
+	new file:   input/redirects/CodeSystem/iana-mime-type.html
+	new file:   input/redirects/CodeSystem/icd-10-bmg-2014.html
+	new file:   input/redirects/CodeSystem/icd-10-bmg-2017.html
+	new file:   input/redirects/CodeSystem/icd-10-bmg-2020.html
+	new file:   input/redirects/CodeSystem/icd-o-3.html
+	new file:   input/redirects/CodeSystem/icf.html
+	new file:   input/redirects/CodeSystem/icpc2.html
+	new file:   input/redirects/CodeSystem/ihe-pharmaceutical-advice-status-list.html
+	new file:   input/redirects/CodeSystem/ips-absentorunknowndata.html
+	new file:   input/redirects/CodeSystem/ips-conditionclinicalstatuscodes.html
+	new file:   input/redirects/CodeSystem/ips-conditionverificationstatus.html
+	new file:   input/redirects/CodeSystem/iso-3166-1-alpha-3.html
+	new file:   input/redirects/CodeSystem/iso-3166-alpha-2-code.html
+	new file:   input/redirects/CodeSystem/iso-639-2.html
+	new file:   input/redirects/CodeSystem/leistungskatalog-ambulant.html
+	new file:   input/redirects/CodeSystem/leistungskatalog-gesamt.html
+	new file:   input/redirects/CodeSystem/leistungskatalog-stationaer.html
+	new file:   input/redirects/CodeSystem/lkf-diagnose-art.html
+	new file:   input/redirects/CodeSystem/lkf-diagnose-statauf.html
+	new file:   input/redirects/CodeSystem/lkf-diagnose-typ.html
+	new file:   input/redirects/CodeSystem/lkf-ergaenzung.html
+	new file:   input/redirects/CodeSystem/mdc-medicaldevicecommunications.html
+	new file:   input/redirects/CodeSystem/medikation-ages-wirkstoffe.html
+	new file:   input/redirects/CodeSystem/medikationartanwendung.html
+	new file:   input/redirects/CodeSystem/medikationdarreichungsform.html
+	new file:   input/redirects/CodeSystem/medikationpackaging.html
+	new file:   input/redirects/CodeSystem/medikationrezeptart.html
+	new file:   input/redirects/CodeSystem/medikationrezeptpflichtstatus.html
+	new file:   input/redirects/CodeSystem/medikationtherapieart.html
+	new file:   input/redirects/CodeSystem/oeaek-additivfach.html
+	new file:   input/redirects/CodeSystem/oeaek-berechtigungen.html
+	new file:   input/redirects/CodeSystem/oeaek-fachrichtung.html
+	new file:   input/redirects/CodeSystem/oeaek-spezialdiplom.html
+	new file:   input/redirects/CodeSystem/oeaek-spezialisierung.html
+	new file:   input/redirects/CodeSystem/oeaek-zertifikate.html
+	new file:   input/redirects/CodeSystem/rast-klassen.html
+	new file:   input/redirects/CodeSystem/sciphox-diagnosenzusatz.html
+	new file:   input/redirects/CodeSystem/sciphox-seitenlokalisation.html
+	new file:   input/redirects/CodeSystem/snomed-ct-auszug.html
+	new file:   input/redirects/CodeSystem/ucum.html
+	new file:   input/redirects/ConceptMap/elga-lebensmittelallergene-mapping.html
+	new file:   input/redirects/ValueSet/appc-lateralitaet.html
+	new file:   input/redirects/ValueSet/appc-modalitaet.html
+	new file:   input/redirects/ValueSet/appc-prozeduren.html
+	new file:   input/redirects/ValueSet/atcdabbr-lateralityqualifiercode.html
+	new file:   input/redirects/ValueSet/atcdabbr-noinformationqualifier.html
+	new file:   input/redirects/ValueSet/austrian-designation-use.html
+	new file:   input/redirects/ValueSet/dgc-country.html
+	new file:   input/redirects/ValueSet/dgc-diseaseoragent.html
+	new file:   input/redirects/ValueSet/dgc-doses.html
+	new file:   input/redirects/ValueSet/dgc-medicinalproduct.html
+	new file:   input/redirects/ValueSet/dgc-ratnamemanufacturer.html
+	new file:   input/redirects/ValueSet/dgc-resultofthetest.html
+	new file:   input/redirects/ValueSet/dgc-typeoftest.html
+	new file:   input/redirects/ValueSet/dgc-vaccine.html
+	new file:   input/redirects/ValueSet/dgc-vaccinemarketingauthorizationholder.html
+	new file:   input/redirects/ValueSet/dicom-sopclasses.html
+	new file:   input/redirects/ValueSet/eimpf-antikoerperbestimmung.html
+	new file:   input/redirects/ValueSet/eimpf-historischeimpfstoffe.html
+	new file:   input/redirects/ValueSet/eimpf-immunizationtarget.html
+	new file:   input/redirects/ValueSet/eimpf-impfdosis.html
+	new file:   input/redirects/ValueSet/eimpf-impfgrund.html
+	new file:   input/redirects/ValueSet/eimpf-impfrelevanteerkrankung.html
+	new file:   input/redirects/ValueSet/eimpf-impfrollen.html
+	new file:   input/redirects/ValueSet/eimpf-impfschema.html
+	new file:   input/redirects/ValueSet/eimpf-impfstoffe.html
+	new file:   input/redirects/ValueSet/eimpf-mengenart.html
+	new file:   input/redirects/ValueSet/eimpf-specialcasevaccination.html
+	new file:   input/redirects/ValueSet/eimpf-specialsituationindication.html
+	new file:   input/redirects/ValueSet/eimpf-zusatzklassifikation.html
+	new file:   input/redirects/ValueSet/elga-absentorunknownallergies.html
+	new file:   input/redirects/ValueSet/elga-absentorunknowndevices.html
+	new file:   input/redirects/ValueSet/elga-absentorunknownmedication.html
+	new file:   input/redirects/ValueSet/elga-absentorunknownproblems.html
+	new file:   input/redirects/ValueSet/elga-absentorunknownprocedures.html
+	new file:   input/redirects/ValueSet/elga-actcode-abginfo.html
+	new file:   input/redirects/ValueSet/elga-actcode-patinfo.html
+	new file:   input/redirects/ValueSet/elga-actencountercode.html
+	new file:   input/redirects/ValueSet/elga-addressuse.html
+	new file:   input/redirects/ValueSet/elga-administrativegender.html
+	new file:   input/redirects/ValueSet/elga-alcoholconsumption.html
+	new file:   input/redirects/ValueSet/elga-allergietyp.html
+	new file:   input/redirects/ValueSet/elga-allergyorintoleranceagent.html
+	new file:   input/redirects/ValueSet/elga-allergyorintolerancetype.html
+	new file:   input/redirects/ValueSet/elga-allergyreaction.html
+	new file:   input/redirects/ValueSet/elga-allergystatuscode.html
+	new file:   input/redirects/ValueSet/elga-anamneselabormikrobiologie.html
+	new file:   input/redirects/ValueSet/elga-antibiogramm.html
+	new file:   input/redirects/ValueSet/elga-artderdiagnose.html
+	new file:   input/redirects/ValueSet/elga-auditeventid.html
+	new file:   input/redirects/ValueSet/elga-auditeventtype-a-arr.html
+	new file:   input/redirects/ValueSet/elga-auditeventtype.html
+	new file:   input/redirects/ValueSet/elga-auditparticipantobjectidtype.html
+	new file:   input/redirects/ValueSet/elga-auditparticipantobjecttype.html
+	new file:   input/redirects/ValueSet/elga-auditparticipantobjecttyperole.html
+	new file:   input/redirects/ValueSet/elga-auditroleid.html
+	new file:   input/redirects/ValueSet/elga-auditsourcetype.html
+	new file:   input/redirects/ValueSet/elga-authorspeciality.html
+	new file:   input/redirects/ValueSet/elga-conditionstatuscode.html
+	new file:   input/redirects/ValueSet/elga-conditionverificationstatus.html
+	new file:   input/redirects/ValueSet/elga-confidentiality.html
+	new file:   input/redirects/ValueSet/elga-criticalityobservationvalue.html
+	new file:   input/redirects/ValueSet/elga-currentsmokingstatus.html
+	new file:   input/redirects/ValueSet/elga-diagnosesicherheit.html
+	new file:   input/redirects/ValueSet/elga-dokumentenklassen.html
+	new file:   input/redirects/ValueSet/elga-dosisparameter.html
+	new file:   input/redirects/ValueSet/elga-einnahmezeitpunkte.html
+	new file:   input/redirects/ValueSet/elga-entitynamepartqualifier.html
+	new file:   input/redirects/ValueSet/elga-entitynameuse.html
+	new file:   input/redirects/ValueSet/elga-entlassungsmanagementa.html
+	new file:   input/redirects/ValueSet/elga-expecteddeliverydatemethod.html
+	new file:   input/redirects/ValueSet/elga-formatcode.html
+	new file:   input/redirects/ValueSet/elga-formatcodezusatz.html
+	new file:   input/redirects/ValueSet/elga-healthcarefacilitytypecode.html
+	new file:   input/redirects/ValueSet/elga-humanactsite.html
+	new file:   input/redirects/ValueSet/elga-humanlanguage.html
+	new file:   input/redirects/ValueSet/elga-informationrecipienttype.html
+	new file:   input/redirects/ValueSet/elga-insuredassocentity.html
+	new file:   input/redirects/ValueSet/elga-kulturerregernachweis.html
+	new file:   input/redirects/ValueSet/elga-laborparameter.html
+	new file:   input/redirects/ValueSet/elga-laborstruktur.html
+	new file:   input/redirects/ValueSet/elga-laendercodes.html
+	new file:   input/redirects/ValueSet/elga-languageabilitymode.html
+	new file:   input/redirects/ValueSet/elga-languagecode.html
+	new file:   input/redirects/ValueSet/elga-lebensmittelallergene.html
+	new file:   input/redirects/ValueSet/elga-mammogramassessment.html
+	new file:   input/redirects/ValueSet/elga-maritalstatus.html
+	new file:   input/redirects/ValueSet/elga-medicaldevices.html
+	new file:   input/redirects/ValueSet/elga-medientyp.html
+	new file:   input/redirects/ValueSet/elga-medikationabgabeart.html
+	new file:   input/redirects/ValueSet/elga-medikationartanwendung.html
+	new file:   input/redirects/ValueSet/elga-medikationdarreichungsform.html
+	new file:   input/redirects/ValueSet/elga-medikationfrequenz.html
+	new file:   input/redirects/ValueSet/elga-medikationmengenart.html
+	new file:   input/redirects/ValueSet/elga-medikationmengenartalternativ.html
+	new file:   input/redirects/ValueSet/elga-medikationpharmazeutischeempfehlungstatus.html
+	new file:   input/redirects/ValueSet/elga-medikationrezeptart.html
+	new file:   input/redirects/ValueSet/elga-medikationrezeptpflichtstatus.html
+	new file:   input/redirects/ValueSet/elga-medikationtherapieart.html
+	new file:   input/redirects/ValueSet/elga-mikroorganismen.html
+	new file:   input/redirects/ValueSet/elga-nachweisergebnis.html
+	new file:   input/redirects/ValueSet/elga-noinformation.html
+	new file:   input/redirects/ValueSet/elga-nullflavor.html
+	new file:   input/redirects/ValueSet/elga-observationinterpretation.html
+	new file:   input/redirects/ValueSet/elga-participationfunctioncode.html
+	new file:   input/redirects/ValueSet/elga-personalrelationship.html
+	new file:   input/redirects/ValueSet/elga-practicesetting.html
+	new file:   input/redirects/ValueSet/elga-pregnanciessummary.html
+	new file:   input/redirects/ValueSet/elga-pregnancystatus.html
+	new file:   input/redirects/ValueSet/elga-probenmaterial.html
+	new file:   input/redirects/ValueSet/elga-problemarten.html
+	new file:   input/redirects/ValueSet/elga-problemkataloge.html
+	new file:   input/redirects/ValueSet/elga-problemseverity.html
+	new file:   input/redirects/ValueSet/elga-problemstatuscode.html
+	new file:   input/redirects/ValueSet/elga-procedureapproachsite.html
+	new file:   input/redirects/ValueSet/elga-proficiencylevelcode.html
+	new file:   input/redirects/ValueSet/elga-realmcode.html
+	new file:   input/redirects/ValueSet/elga-religiousaffiliation.html
+	new file:   input/redirects/ValueSet/elga-roleclass.html
+	new file:   input/redirects/ValueSet/elga-rollen.html
+	new file:   input/redirects/ValueSet/elga-sectionsentlassungaerztl.html
+	new file:   input/redirects/ValueSet/elga-sectionsentlassungpflege.html
+	new file:   input/redirects/ValueSet/elga-sectionspflegesitber.html
+	new file:   input/redirects/ValueSet/elga-sectionsradiologie.html
+	new file:   input/redirects/ValueSet/elga-sectionsserviceevents.html
+	new file:   input/redirects/ValueSet/elga-seitenlokalisation.html
+	new file:   input/redirects/ValueSet/elga-serviceeventperformer.html
+	new file:   input/redirects/ValueSet/elga-serviceeventsentlassbr.html
+	new file:   input/redirects/ValueSet/elga-serviceeventslabor.html
+	new file:   input/redirects/ValueSet/elga-serviceeventstelemonepi.html
+	new file:   input/redirects/ValueSet/elga-significantpathogens.html
+	new file:   input/redirects/ValueSet/elga-specimentype.html
+	new file:   input/redirects/ValueSet/elga-targetsite.html
+	new file:   input/redirects/ValueSet/elga-telecomaddressuse.html
+	new file:   input/redirects/ValueSet/elga-topographicalmodifierqualifier.html
+	new file:   input/redirects/ValueSet/elga-typeofproblem.html
+	new file:   input/redirects/ValueSet/elga-urlscheme.html
+	new file:   input/redirects/ValueSet/elga-vitalparameterarten.html
+	new file:   input/redirects/ValueSet/elga-wirkstoffe-ages.html
+	new file:   input/redirects/ValueSet/ems-anti-hcv-immunoassay.html
+	new file:   input/redirects/ValueSet/ems-anti-hcv-immunoblot-assay.html
+	new file:   input/redirects/ValueSet/ems-betreuung.html
+	new file:   input/redirects/ValueSet/ems-hbv-status.html
+	new file:   input/redirects/ValueSet/ems-hcv-core-ag-assay.html
+	new file:   input/redirects/ValueSet/ems-hospitalisierung.html
+	new file:   input/redirects/ValueSet/ems-impfstatus.html
+	new file:   input/redirects/ValueSet/ems-klinischemanifestation.html
+	new file:   input/redirects/ValueSet/ems-krankheitsmerkmale.html
+	new file:   input/redirects/ValueSet/ems-lebensmittelbedingteintoxikationen.html
+	new file:   input/redirects/ValueSet/ems-materialmethode.html
+	new file:   input/redirects/ValueSet/ems-meldepflichtige-krankheiten.html
+	new file:   input/redirects/ValueSet/ems-reiseland.html
+	new file:   input/redirects/ValueSet/ems-taetigkeitsbereich.html
+	new file:   input/redirects/ValueSet/hl7-at-patientidentifier.html
+	new file:   input/redirects/ValueSet/hl7-at-xds-dokumentenklassen.html
+	new file:   input/redirects/ValueSet/langid-at.html
+	new file:   input/redirects/ValueSet/lkf-diagnose-art.html
+	new file:   input/redirects/ValueSet/lkf-diagnose-statauf.html
+	new file:   input/redirects/ValueSet/lkf-diagnose-typ.html
+	new file:   input/redirects/ValueSet/v3-MaterialEntityClassType.html
+	new file:   input/redirects/ValueSet/v3-ParticipationType.html
+	new file:   input/redirects/ValueSet/v3-TargetAwareness.html
+	new file:   input/redirects/ValueSet/zeiteinheiten.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	_____input-cache/
+	__pycache__/
+	currentCommit.txt
+	input/images-source/
+	input/pagecontent/
+	input/resources/ValueSet-elga-medikationartanwendung.4.fhir.json
+	input/resources/ValueSet-elga-medikationdarreichungsform.4.fhir.json
+	input/resources/ValueSet-elga-medikationmengenart.4.fhir.json
+	input/resources/ValueSet-elga-wirkstoffe-ages.4.fhir.json
+	input/terminologit-template/
+	lastSuccessfulPipeline.txt
+	new_previous_versions_files.txt
+	old_terminologiesMetadata.csv
+	processedTerminologies.csv
+	setenv.sh
+	terminology_file_paths.txt
+	test.csv
+	test.py
+	test.txt
+	tmp_lastSuccessfulPipeline.txt
+
