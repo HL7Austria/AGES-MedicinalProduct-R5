@@ -1,3 +1,4 @@
+//TODO add national values
 CodeSystem: LegalStatusForTheSupplyCs
 Id: 100000072051
 Title: "Legal Status From the Supply"

@@ -1,9 +1,8 @@
-Profile:  MedicinalProductDefinition-eMed
+Profile:  at-emed-MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
-Id:       MedicinalProductDefinition-eMed
+Id:       at-emed-MedicinalProductDefinition
 Title:    "MedicinalProductDefinition-Med"
 Description: "Medicinal Product Definition Profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
-* ^status = #draft
 
 // Identifiers
 * identifier ^slicing.discriminator.type = #value
@@ -19,8 +18,8 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
 * identifier[pmsId].system = $GRZ
 * identifier[pmsId] only Identifier-eMed
 
-* identifier[pmsId].system = $pmsIdUrl
-* identifier[pmsId] only Identifier-eMed
+* identifier[GRZ].system = $pmsIdUrl
+* identifier[GRZ] only Identifier-eMed
 
 // Domain - Domäne (Nur Human)
 * domain only EmaRefTermCodeableConcept
@@ -37,7 +36,8 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
 * name.part ^slicing.description = "Slice based on the part.type.coding.code"
 * name.part.part 1..1
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
-* name.part.type.coding only EmaNamePartTypeCoding
+* name.part.type.coding only EmaCoding
+* name.part.type.coding.system = $namePartUrl
 * name.part contains 
 inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
