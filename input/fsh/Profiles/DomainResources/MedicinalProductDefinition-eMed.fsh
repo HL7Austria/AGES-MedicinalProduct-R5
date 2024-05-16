@@ -16,7 +16,7 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
     pmsId 0..1 and
     GRZ 1..1
 
-* identifier[pmsId].system = $grz
+* identifier[pmsId].system = $GRZ
 * identifier[pmsId] only Identifier-eMed
 
 * identifier[pmsId].system = $pmsIdUrl
@@ -39,7 +39,7 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
 * name.part.type.coding only EmaNamePartTypeCoding
 * name.part contains 
-inventedName 1..1 and // Invented Name - Zulassungsname
+inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
 
 * name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002

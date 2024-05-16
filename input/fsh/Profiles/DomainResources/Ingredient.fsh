@@ -4,17 +4,29 @@ Id:       Ingredient
 Title:    "ingredient"
 Description: "Defines the Strength and Composition parts of a medicinal product"
 
-// Active Ingredient - Rolle (ELGA_Ingredient_role)
+// Active Ingredient Role - Substanzrolle (ELGA_Ingredient_role)
 
-// Substance Code Pharos - Deutsch (ELGA_Substanz)
+// Substance
 * substance.code.concept 1..1
-* substance.code.concept.coding.system 1..1
-* substance.code.concept.coding.system = $substanceDefinitionUrl
-* substance.code.concept.coding.code 1..1
-* substance.code.concept.coding.display 1..1
+* substance.code.condept.coding ^slice 
+* substance.code.condept.coding ^slicing.discriminator.type = #value
+* substance.code.condept.coding ^slicing.discriminator.path = "system"
+* substance.code.condept.coding ^slicing.description = "Slice differentiating SMS and Pharos Substance Ids"
+* substance.code.condept.coding ^slicing.ordered = false
+* substance.code.condept.coding ^slicing.rules = #closed
+* substance.code.condept.coding contains 
+substancePharos 1..1 // Substance Code Pharos - Deutsch (ELGA_Substanz)
+and substanceSMS 1..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
+
+* substance.code.condept.coding.system[substancePharos] = $substancePharosUrl
+* substance.code.condept.coding.system[substanceSMS] = $substanceSMSUrl
+
+* substance.code.condept.coding 1..2 
+* substance.code.concept only EmaRefTermCodeableConcept
 
 
-// Substance Code SMS - English (ELGA_ActiveIngredient)
+
+
 
 // Strength - Stärke (ELGA_Ingredient_low_strength, ELGA_Ingredient_low_strength_unit)
 * substance.strength 1..1
