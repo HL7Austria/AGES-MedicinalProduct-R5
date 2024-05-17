@@ -16,10 +16,10 @@ Description: "Medicinal Product Definition profiled resource containing a subset
     GRZ 1..1
 
 * identifier[pmsId].system = $GRZ
-* identifier[pmsId] only Identifier-eMed
+* identifier[pmsId] only AT_MedicinalProduct_Identifier
 
 * identifier[GRZ].system = $pmsIdUrl
-* identifier[GRZ] only Identifier-eMed
+* identifier[GRZ] only AT_MedicinalProduct_Identifier
 
 // Domain - Domäne (Nur Human)
 * domain only RefTermCodeableConcept

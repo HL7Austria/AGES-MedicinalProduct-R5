@@ -1,6 +1,6 @@
-Profile:  Identifier-eMed
+Profile:  AT_MedicinalProduct_Identifier
 Parent:   Identifier
-Id:       Identifier-eMed
+Id:       at-medprod-identifier
 Title:    "Identifier"
 Description: "Identifier used in the AGES export of medicinal products"
 

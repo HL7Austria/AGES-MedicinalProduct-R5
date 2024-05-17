@@ -11,7 +11,7 @@ Description: "Contains the authorisation information of a medicinal product"
 // Authorisation Number - Zulassungsnummer
 * identifier 1..1
 * identifier.system = $marketingAuthorizationNumberUrl
-* identifier only Identifier-eMed
+* identifier only AT_MedicinalProduct_Identifier
 
 // Regulated authorisation of type Marketing Authorisation
 * type 1..1
