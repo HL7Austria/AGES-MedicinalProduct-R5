@@ -32,13 +32,12 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 // Name parts (slices):
 * name.part ^slicing.discriminator.type = #value
 * name.part ^slicing.discriminator.path = "type"
-* name.part ^slicing.rules = #open
 * name.part ^slicing.description = "Slice based on the part.type.coding.code"
-* name.part.part 1..1
+* name.part ^slicing.ordered = false
+* name.part ^slicing.rules = #open
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
 * name.part.type.coding only EmaCoding
-* name.part.type.coding.system = $namePartUrl
-* name.part contains 
+* name.part contains
 inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
 
