@@ -42,7 +42,7 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
 
-* name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002
+* name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002 "Invented name part"
 //* name.part[pharmaceuticalDoseForm].type = MedicinalProductNamePartTypeCs#220000000005
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
