@@ -2,12 +2,10 @@ CodeSystem: RegulatoryEntitlementTypeCs
 Id: 220000000060
 Title: "Regulatory Entitlement"
 Description:  "Regulatory Entitlement"
-* ^meta.versionId = "5.0.0" // TODO: ??
-* ^meta.lastUpdated = "2023-08-03T11:35:00.198Z"
-// The line below overrides the canonical URL (which is the default). 
-* ^url = $regulatoryEntitlementTypeUrl
+// The line below overrides the canonical URL (which is the default).
+* ^url = https://spor.ema.europa.eu/v1/lists/220000000060
 * ^status = #active
-* ^version = "5.0.0"
+* ^version = "5.0.0" // should represent the version of the code system not the FHIR version
 * ^experimental = false
 * ^publisher = "European Medicines Agency"
 //* ^jurisdiction = urn:iso:std:iso:3166#US "United States of America" //TODO - get this code
