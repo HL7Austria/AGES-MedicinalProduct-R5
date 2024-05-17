@@ -6,7 +6,7 @@ Description: "Defines the package information of a medicinal product"
 
 * id 1..1
 * packageFor 1..1
-* packageFor only Reference(http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition)
+* packageFor only Reference(AT_MedicinalProduct_MedicinalProductDefinition)
 
 
 

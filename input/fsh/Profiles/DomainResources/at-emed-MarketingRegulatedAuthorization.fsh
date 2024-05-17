@@ -6,7 +6,7 @@ Description: "Contains the authorisation information of a medicinal product"
 
 * id 1..1
 * subject 1..1
-* subject only Reference (http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition)
+* subject only Reference (AT_MedicinalProduct_MedicinalProductDefinition)
 
 // Authorisation Number - Zulassungsnummer
 * identifier 1..1
