@@ -20,7 +20,7 @@ and substanceSMS 0..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
 * substance.code.concept.coding[substancePharos].system = $substancePharosUrl
 * substance.code.concept.coding[substanceSMS].system = $substanceSMSUrl
 
-* substance.code.concept only RefTermCodeableConcept
+* substance.code.concept only AT_MedicinalProduct_CodeableConcept
 
 
 

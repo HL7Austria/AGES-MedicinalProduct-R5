@@ -15,12 +15,12 @@ Description: "Contains the authorisation information of a medicinal product"
 
 // Regulated authorisation of type Marketing Authorisation
 * type 1..1
-* type only RefTermCodeableConcept
+* type only AT_MedicinalProduct_CodeableConcept
 * type = RegulatoryEntitlementTypeCs#220000000061 "Marketing Authorisation"
 
 // Authorisation State - Zulassungsstatus
 * status 1..1
-* status only RefTermCodeableConcept
+* status only AT_MedicinalProduct_CodeableConcept
 * status.coding from RegulatoryEntitlementStatusVs
 
 // Validity - Gültigkeit des Zulassungsstatus //TODO Elga
