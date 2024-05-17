@@ -1,8 +1,8 @@
-Profile:  at-emed-MarketingRegulatedAuthorization
+Profile:  AT_MedicinalProduct_MarketingRegulatedAuthorization
 Parent:   RegulatedAuthorization
-Id:       at-emed-MarketingRegulatedAuthorization
+Id:       at-medprod-marketingregulatedauthorization
 Title:    "Marketing Regulated Authorization"
-Description: "Contains the Authorisation information of a Medicinal Product"
+Description: "Contains the authorisation information of a medicinal product"
 
 * id 1..1
 * subject 1..1

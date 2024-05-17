@@ -1,8 +1,8 @@
-Profile:  at-emed-MedicinalProductDefinition
+Profile:  AT_MedicinalProduct_MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
-Id:       at-emed-MedicinalProductDefinition
-Title:    "MedicinalProductDefinition-Med"
-Description: "Medicinal Product Definition Profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
+Id:       at-medprod-medicinalproductdefinition
+Title:    "Medicinal Product Definition"
+Description: "Medicinal Product Definition profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
 
 // Identifiers
 * identifier ^slicing.discriminator.type = #value

@@ -1,8 +1,8 @@
-Profile:  at-emed-Ingredient
+Profile:  AT_MedicinalProduct_Ingredient
 Parent:   Ingredient
-Id:       at-emed-Ingredient
-Title:    "ingredient"
-Description: "Defines the Strength and Composition parts of a medicinal product"
+Id:       at-medprod-ingredient
+Title:    "Ingredient"
+Description: "Defines the strength and composition parts of a medicinal product"
 
 // Active Ingredient Role - Substanzrolle (ELGA_Ingredient_role)
 
