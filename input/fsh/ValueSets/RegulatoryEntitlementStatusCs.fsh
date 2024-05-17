@@ -3,7 +3,7 @@ Id: regulatoryEntitlementStatusCs
 Title: "Regulatory Entitlement Status"
 Description:  "Regulatory Entitlement Status"
 // The line below overrides the canonical URL (which is the default).
-* ^url = https://spor.ema.europa.eu/v1/lists/100000072049
+* ^url = "https://spor.ema.europa.eu/v1/lists/100000072049"
 * ^status = #active
 * ^version = "5.0.0" // should represent the version of the code system not the FHIR version
 * ^experimental = false

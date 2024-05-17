@@ -3,7 +3,7 @@ Id: 220000000060
 Title: "Regulatory Entitlement"
 Description:  "Regulatory Entitlement"
 // The line below overrides the canonical URL (which is the default).
-* ^url = https://spor.ema.europa.eu/v1/lists/220000000060
+* ^url = "https://spor.ema.europa.eu/v1/lists/220000000060"
 * ^status = #active
 * ^version = "5.0.0" // should represent the version of the code system not the FHIR version
 * ^experimental = false
