@@ -12,6 +12,7 @@ Description: "Defines the package information of a medicinal product"
 
 // PZN
 * identifier 1..1
+* identifier only Identifier-eMed
 * identifier.system = $PZNUrl
 
 // Delivery State of the package - Status der Packung
