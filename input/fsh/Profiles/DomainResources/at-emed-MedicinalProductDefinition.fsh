@@ -22,12 +22,12 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
 * identifier[GRZ] only Identifier-eMed
 
 // Domain - Domäne (Nur Human)
-* domain only EmaRefTermCodeableConcept
+* domain only RefTermCodeableConcept
 * domain.coding from DomainVs (required)
 
 
 // Authorisation Name (Full Name) - Name der Arzneispezialität
-* name.type only EmaRefTermCodeableConcept
+* name.type only RefTermCodeableConcept
 
 // Name parts (slices):
 * name.part ^slicing.discriminator.type = #value
@@ -47,7 +47,7 @@ inventedName 1..1 // Invented Name - Zulassungsname
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
 * combinedPharmaceuticalDoseForm 1..1
-* combinedPharmaceuticalDoseForm only EmaRefTermCodeableConcept
+* combinedPharmaceuticalDoseForm only RefTermCodeableConcept
 
 
 // Prescription requirements - Rezeptpflichtstatus

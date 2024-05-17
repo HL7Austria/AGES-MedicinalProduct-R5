@@ -21,7 +21,7 @@ and substanceSMS 0..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
 * substance.code.concept.coding[substanceSMS].system = $substanceSMSUrl
 
 * substance.code.concept.coding 1..2 
-* substance.code.concept only EmaRefTermCodeableConcept
+* substance.code.concept only RefTermCodeableConcept
 
 
 

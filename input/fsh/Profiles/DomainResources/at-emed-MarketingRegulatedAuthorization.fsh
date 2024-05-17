@@ -15,12 +15,12 @@ Description: "Contains the Authorisation information of a Medicinal Product"
 
 // Regulated authorisation of type Marketing Authorisation
 * type 1..1
-* type only EmaRefTermCodeableConcept
+* type only RefTermCodeableConcept
 * type = RegulatoryEntitlementTypeCs#220000000061
 
 // Authorisation State - Zulassungsstatus
 * status 1..1
-* type only EmaRefTermCodeableConcept
+* type only RefTermCodeableConcept
 * status.coding.system = $regulatoryEntitlementStatusUrl
 * status.coding from RegulatoryEntitlementStatusVs
 
