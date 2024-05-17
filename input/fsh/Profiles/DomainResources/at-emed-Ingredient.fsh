@@ -13,14 +13,13 @@ Description: "Defines the strength and composition parts of a medicinal product"
 * substance.code.concept.coding ^slicing.description = "Slice differentiating SMS and Pharos Substance Ids"
 * substance.code.concept.coding ^slicing.ordered = false
 * substance.code.concept.coding ^slicing.rules = #open
-* substance.code.concept.coding contains 
+* substance.code.concept.coding contains
 substancePharos 1..1 // Substance Code Pharos - Deutsch (ELGA_Substanz)
 and substanceSMS 0..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
 
 * substance.code.concept.coding[substancePharos].system = $substancePharosUrl
 * substance.code.concept.coding[substanceSMS].system = $substanceSMSUrl
 
-* substance.code.concept.coding 1..2 
 * substance.code.concept only RefTermCodeableConcept
 
 
