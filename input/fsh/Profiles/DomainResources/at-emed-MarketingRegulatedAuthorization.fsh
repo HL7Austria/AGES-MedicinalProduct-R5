@@ -20,8 +20,7 @@ Description: "Contains the authorisation information of a medicinal product"
 
 // Authorisation State - Zulassungsstatus
 * status 1..1
-* type only RefTermCodeableConcept
-* status.coding.system = $regulatoryEntitlementStatusUrl
+* status only RefTermCodeableConcept
 * status.coding from RegulatoryEntitlementStatusVs
 
 // Validity - Gültigkeit des Zulassungsstatus //TODO Elga
