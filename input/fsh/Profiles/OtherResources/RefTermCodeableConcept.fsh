@@ -4,4 +4,4 @@ Id:       RefTermCodeableConcept
 Title:    "Generic ReferentialTerm CodeableConcept"
 Description: "Generic ReferentialTerm CodeableConcept"
 
-* coding only EmaCoding
+* coding only AT_MedicinalProduct_Coding

@@ -36,7 +36,7 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * name.part ^slicing.ordered = false
 * name.part ^slicing.rules = #open
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
-* name.part.type.coding only EmaCoding
+* name.part.type.coding only AT_MedicinalProduct_Coding
 * name.part contains
 inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
