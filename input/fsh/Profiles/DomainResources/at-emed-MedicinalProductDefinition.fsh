@@ -1,7 +1,7 @@
 Profile:  at-emed-MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
 Id:       at-emed-MedicinalProductDefinition
-Title:    "MedicinalProductDefinition-Med"
+Title:    "MedicinalProductDefinition"
 Description: "Medicinal Product Definition Profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
 
 // Identifiers
@@ -60,5 +60,5 @@ inventedName 1..1 // Invented Name - Zulassungsname
 
 // ATC Code
 
-// Route of administration
+// Route of administration --> Adminproduct! also add manuf item for cont item amount; + link! 
 
