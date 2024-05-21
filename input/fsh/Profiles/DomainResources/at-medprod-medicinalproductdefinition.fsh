@@ -1,8 +1,8 @@
-Profile:  at-emed-MedicinalProductDefinition
+Profile:  AT_MedicinalProduct_MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
-Id:       at-emed-MedicinalProductDefinition
-Title:    "MedicinalProductDefinition"
-Description: "Medicinal Product Definition Profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
+Id:       at-medprod-medicinalproductdefinition
+Title:    "Medicinal Product Definition"
+Description: "Medicinal Product Definition profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
 
 // Identifiers
 * identifier ^slicing.discriminator.type = #value
@@ -16,29 +16,28 @@ Description: "Medicinal Product Definition Profiled resource containing a subset
     GRZ 1..1
 
 * identifier[pmsId].system = $GRZ
-* identifier[pmsId] only Identifier-eMed
+* identifier[pmsId] only AT_MedicinalProduct_Identifier
 
 * identifier[GRZ].system = $pmsIdUrl
-* identifier[GRZ] only Identifier-eMed
+* identifier[GRZ] only AT_MedicinalProduct_Identifier
 
 // Domain - Domäne (Nur Human)
-* domain only RefTermCodeableConcept
+* domain only AT_MedicinalProduct_CodeableConcept
 * domain.coding from DomainVs (required)
 
 
 // Authorisation Name (Full Name) - Name der Arzneispezialität
-* name.type only RefTermCodeableConcept
+* name.type only AT_MedicinalProduct_CodeableConcept
 
 // Name parts (slices):
 * name.part ^slicing.discriminator.type = #value
 * name.part ^slicing.discriminator.path = "type"
-* name.part ^slicing.rules = #open
 * name.part ^slicing.description = "Slice based on the part.type.coding.code"
-* name.part.part 1..1
+* name.part ^slicing.ordered = false
+* name.part ^slicing.rules = #open
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
-* name.part.type.coding only EmaCoding
-* name.part.type.coding.system = $namePartUrl
-* name.part contains 
+* name.part.type.coding only AT_MedicinalProduct_Coding
+* name.part contains
 inventedName 1..1 // Invented Name - Zulassungsname
 // Todo: Trade Name - Handelsname
 
@@ -47,7 +46,7 @@ inventedName 1..1 // Invented Name - Zulassungsname
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
 * combinedPharmaceuticalDoseForm 1..1
-* combinedPharmaceuticalDoseForm only RefTermCodeableConcept
+* combinedPharmaceuticalDoseForm only AT_MedicinalProduct_CodeableConcept
 
 
 // Prescription requirements - Rezeptpflichtstatus

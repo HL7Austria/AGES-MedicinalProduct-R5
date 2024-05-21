@@ -1,8 +1,8 @@
-Profile:  at-emed-Ingredient
+Profile:  AT_MedicinalProduct_Ingredient
 Parent:   Ingredient
-Id:       at-emed-Ingredient
-Title:    "ingredient"
-Description: "Defines the Strength and Composition parts of a medicinal product"
+Id:       at-medprod-ingredient
+Title:    "Ingredient"
+Description: "Defines the strength and composition parts of a medicinal product"
 
 * for 1..1
 // * for only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition) 
@@ -16,15 +16,14 @@ Description: "Defines the Strength and Composition parts of a medicinal product"
 * substance.code.concept.coding ^slicing.description = "Slice differentiating SMS and Pharos Substance Ids"
 * substance.code.concept.coding ^slicing.ordered = false
 * substance.code.concept.coding ^slicing.rules = #open
-* substance.code.concept.coding contains 
+* substance.code.concept.coding contains
 substancePharos 1..1 // Substance Code Pharos - Deutsch (ELGA_Substanz)
 and substanceSMS 0..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
 
 * substance.code.concept.coding[substancePharos].system = $substancePharosUrl
 * substance.code.concept.coding[substanceSMS].system = $substanceSMSUrl
 
-* substance.code.concept.coding 1..2 
-* substance.code.concept only RefTermCodeableConcept
+* substance.code.concept only AT_MedicinalProduct_CodeableConcept
 
 
 

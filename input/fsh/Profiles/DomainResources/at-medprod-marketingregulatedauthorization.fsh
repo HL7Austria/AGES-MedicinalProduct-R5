@@ -1,27 +1,26 @@
-Profile:  at-emed-MarketingRegulatedAuthorization
+Profile:  AT_MedicinalProduct_MarketingRegulatedAuthorization
 Parent:   RegulatedAuthorization
-Id:       at-emed-MarketingRegulatedAuthorization
+Id:       at-medprod-marketingregulatedauthorization
 Title:    "Marketing Regulated Authorization"
-Description: "Contains the Authorisation information of a Medicinal Product"
+Description: "Contains the authorisation information of a medicinal product"
 
 * id 1..1
 * subject 1..1
-* subject only Reference (http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition)
+* subject only Reference (AT_MedicinalProduct_MedicinalProductDefinition)
 
 // Authorisation Number - Zulassungsnummer
 * identifier 1..1
 * identifier.system = $marketingAuthorizationNumberUrl
-* identifier only Identifier-eMed
+* identifier only AT_MedicinalProduct_Identifier
 
 // Regulated authorisation of type Marketing Authorisation
 * type 1..1
-* type only RefTermCodeableConcept
+* type only AT_MedicinalProduct_CodeableConcept
 * type = RegulatoryEntitlementTypeCs#220000000061
 
 // Authorisation State - Zulassungsstatus
 * status 1..1
-* type only RefTermCodeableConcept
-* status.coding.system = $regulatoryEntitlementStatusUrl
+* status only AT_MedicinalProduct_CodeableConcept
 * status.coding from RegulatoryEntitlementStatusVs
 
 // Validity - Gültigkeit des Zulassungsstatus //TODO Elga
