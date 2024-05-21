@@ -29,5 +29,6 @@ Description: "Defines the package information of a medicinal product"
 
 // Package type container - Primärverpackung
 
+// Package items
 
 * description 1..1

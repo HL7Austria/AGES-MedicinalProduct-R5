@@ -4,6 +4,9 @@ Id:       at-medprod-ingredient
 Title:    "Ingredient"
 Description: "Defines the strength and composition parts of a medicinal product"
 
+* for 1..1
+// * for only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition) 
+
 // Active Ingredient Role - Substanzrolle (ELGA_Ingredient_role)
 
 // Substance

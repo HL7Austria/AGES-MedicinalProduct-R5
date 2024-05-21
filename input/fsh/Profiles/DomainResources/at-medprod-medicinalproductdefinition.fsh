@@ -59,5 +59,4 @@ inventedName 1..1 // Invented Name - Zulassungsname
 
 // ATC Code
 
-// Route of administration
 
