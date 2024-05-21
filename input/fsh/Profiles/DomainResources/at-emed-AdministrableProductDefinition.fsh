@@ -7,7 +7,8 @@ Description: "Required for the attribute Route of Administration"
 * id 1..1
 
 * identifier 1..1
-* identifier only EmaMpIdentifier
+* identifier only Identifier-eMed
+* identifier.system = $GRZ
 
 //* status 1..1 - Inherited Cardinality
 * status = #"active"
@@ -24,14 +25,8 @@ Description: "Required for the attribute Route of Administration"
 //* unitOfPresentation from UnitsOfPresentationVs
 
 * producedFrom 0..1
-* producedFrom only Reference(EmaManufacturedItemDefinition)
+* producedFrom only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition)
 
 //* routeOfAdministration 1..* - Inherited Cardinality
 * routeOfAdministration.code only RefTermCodeableConcept
 * routeOfAdministration.code from RoutesAndMethodsOfAdministrationVs
-* routeOfAdministration.targetSpecies 0..1
-* routeOfAdministration.targetSpecies.code only EmaRefTermCodeableConcept
-* routeOfAdministration.targetSpecies.code from TargetSpeciesVs
-
-//* device 0..* - Inherited Cardinality
-* device only Reference(EmaDeviceDefinition)

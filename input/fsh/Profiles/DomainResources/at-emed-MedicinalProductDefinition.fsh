@@ -60,5 +60,4 @@ inventedName 1..1 // Invented Name - Zulassungsname
 
 // ATC Code
 
-// Route of administration --> Adminproduct! also add manuf item for cont item amount; + link! 
 
