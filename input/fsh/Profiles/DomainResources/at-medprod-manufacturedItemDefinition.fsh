@@ -1,8 +1,10 @@
-Profile:  at-emed-ManufacturedItemDefinition
+Profile:  AT_MedicinalProduct_ManufacturedItemDefinition
 Parent:   ManufacturedItemDefinition
-Id:       at-emed-ManufacturedItemDefinition
+Id:       at-medprod-manufacturedItemDefinition
 Title:    "Manufactured item definition"
 Description: "Manufactured Items are required to maintain the link between Ingredient and Packaged Medicinal Product"
+
+// ID Fortlaufende Nr (PHAROS ADMPRO Ref Nr)
 
 // Shortcut could be maintained
 //* extension 1..1

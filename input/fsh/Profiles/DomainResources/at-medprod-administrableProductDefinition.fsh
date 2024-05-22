@@ -1,10 +1,10 @@
-Profile:  at-emed-AdministrableProductDefinition
+Profile:  AT_MedicinalProduct_AdministrableProductDefinition
 Parent:   AdministrableProductDefinition
-Id:       at-emed-AdministrableProductDefinition
+Id:       at-medprod-administrableProductDefinition
 Title:    "Administrable product definition"
 Description: "Required for the attribute Route of Administration"
 
-* id 1..1
+// ID PHP Grz
 
 * identifier 1..1
 * identifier only AT_MedicinalProduct_Identifier
@@ -14,20 +14,18 @@ Description: "Required for the attribute Route of Administration"
 * status = #"active"
 
 * formOf 1..1
-* formOf only Reference(http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition)
+* formOf only Reference(AT_MedicinalProduct_MedicinalProductDefinition)
 
-// Doseform after constituation (new)
-* administrableDoseForm 0..1 - Inherited Cardinality
-* administrableDoseForm only RefTermCodeableConcept
+// Doseform after constituation (new) 
+* administrableDoseForm only AT_MedicinalProduct_CodeableConcept
 * administrableDoseForm from PharmaceuticalDoseFormVs
 
-* unitOfPresentation 0..1 - Inherited Cardinality
-* unitOfPresentation only RefTermCodeableConcept
+* unitOfPresentation only AT_MedicinalProduct_CodeableConcept
 * unitOfPresentation from UnitsOfPresentationVs
 
 // Link between Manufactured item and Pharmaceutical Product 
 * producedFrom 0..1
-* producedFrom only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition)
+* producedFrom only Reference(AT_MedicinalProduct_ManufacturedItemDefinition)
 
 //* routeOfAdministration 1..* - Inherited Cardinality
 * routeOfAdministration.code only AT_MedicinalProduct_CodeableConcept

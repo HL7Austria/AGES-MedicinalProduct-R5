@@ -8,4 +8,3 @@ Description: "Profiled coding for Austrian medicinal product definitions"
 * system.extension contains CodeSystemName named codeSystemName 0..1
 * code 1..1
 * display 1..1
-

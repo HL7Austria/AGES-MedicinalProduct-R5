@@ -1,8 +1,10 @@
 Profile:  AT_MedicinalProduct_MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
-Id:       at-medprod-medicinalproductdefinition
+Id:       at-medprod-medicinalProductDefinition
 Title:    "Medicinal Product Definition"
 Description: "Medicinal Product Definition profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
+
+// Id = Grundzahl
 
 // Identifiers
 * identifier ^slicing.discriminator.type = #value
@@ -48,22 +50,30 @@ inventedName 1..1 // Invented Name - Zulassungsname
 * combinedPharmaceuticalDoseForm 1..1
 * combinedPharmaceuticalDoseForm only AT_MedicinalProduct_CodeableConcept
 
-* combinedPharmaceuticalDoseForm.coding ^slicing.discriminator.type = #pattern
-* combinedPharmaceuticalDoseForm.coding ^slicing.discriminator.path = "system"
-* combinedPharmaceuticalDoseForm.coding ^slicing.rules = #closed
-* combinedPharmaceuticalDoseForm.coding ^slicing.description = "One of 4 Lists can be a dose form"
-* combinedPharmaceuticalDoseForm.coding ^slicing.ordered = false
-
-*combinedPharmaceuticalDoseForm.coding[doseform1].system = $doseform1 (exactly)
-
 // Prescription requirements - Rezeptpflichtstatus
+* legalStatusOfSupply 1..1
+* legalStatusOfSupply only AT_MedicinalProduct_CodeableConcept
+* legalStatusOfSupply from legalStatusForTheSupplyVs
 
-// Immunisation target combination - Kombinationsimpfung
+// Classifications for the rest
+* classification only AT_MedicinalProduct_CodeableConcept
+* classification.coding ^slicing.discriminator.type = #pattern
+* classification.coding ^slicing.discriminator.path = "system"
+* classification.coding ^slicing.rules = #open
+* classification.coding ^slicing.description = "Classification contains ATC Code WHO, ATC Code RMS, Immunisation Target, Lebendimpfstoff, Wechselwirkung"
+* classification.coding ^slicing.ordered = false
+* classification.coding contains 
+    interactionRelevance 0..1 and
+    elgaImpfziel 0..1 and
+    ATCCodeRMS 0..1 and
+    ATCCodeWHO 0..1
 
-// Drug Interaction - Wechselwirkung (ELGA_MedikationWechselwirkungsRelevant)
-
+* classification.coding[interactionRelevance].system = $interactionRelevance // Drug Interaction - Wechselwirkung (ELGA_MedikationWechselwirkungsRelevant)
+* classification.coding[elgaImpfziel].system = $elgaImpfziel // Immunisation target combination - Kombinationsimpfung
+* classification.coding[ATCCodeRMS].system = $ATCCodeRMS // ATC Code
+* classification.coding[ATCCodeWHO].system = $ATCCodeWHO // ATC Code
 // TODO Lebendimpfstoff
 
-// ATC Code
+
 
 
