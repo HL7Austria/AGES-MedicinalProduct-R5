@@ -1,5 +1,5 @@
-<table>
-<thead>
+<table class="grid">
+<tbody>
   <tr>
     <th>"ASP-Liste"</th>
     <th></th>
@@ -10,8 +10,6 @@
     <th></th>
     <th></th>
   </tr>
-</thead>
-<tbody>
   <tr>
     <td>Name (german)</td>
     <td>Description</td>

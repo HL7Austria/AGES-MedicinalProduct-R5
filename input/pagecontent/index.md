@@ -6,8 +6,6 @@
       <li><code class="highlighter-rouge language-plaintext">https://spor.ema.europa.eu/v1/lists/</code></li>
       <li><code class="highlighter-rouge language-plaintext">https://ema.europa.eu/fhir/vs/</code></li>
     </ul>
-    <p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>
-    <p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
   </blockquote>
 </div>
 
