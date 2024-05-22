@@ -12,9 +12,9 @@ Description: "Manufactured Items are required to maintain the link between Ingre
 * status = #"active"
 
 //* manufacturedDoseForm 1..1 - Inherited Cardinality
-* manufacturedDoseForm only RefTermCodeableConcept
+* manufacturedDoseForm only AT_MedicinalProduct_CodeableConcept
 * manufacturedDoseForm from PharmaceuticalDoseFormVs
 
 //* unitOfPresentation 0..1 - Inherited Cardinality
-* unitOfPresentation only RefTermCodeableConcept
+* unitOfPresentation only AT_MedicinalProduct_CodeableConcept
 * unitOfPresentation from UnitsOfPresentationVs

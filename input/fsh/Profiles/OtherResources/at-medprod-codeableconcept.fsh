@@ -1,7 +1,7 @@
-Profile:  RefTermCodeableConcept
+Profile:  AT_MedicinalProduct_CodeableConcept
 Parent:   CodeableConcept
-Id:       RefTermCodeableConcept
+Id:       at-medprod-codeableconcept
 Title:    "Generic ReferentialTerm CodeableConcept"
 Description: "Generic ReferentialTerm CodeableConcept"
 
-* coding only EmaCoding
+* coding only AT_MedicinalProduct_Coding

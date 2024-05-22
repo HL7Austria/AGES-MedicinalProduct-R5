@@ -1,0 +1,8 @@
+- canonicals for all resources which do not have a canonical specified are deducted by the IG's canonical (e.g. https://www.ages.at/fhir/medicinalproduct/StructureDefinition/at-medprod-coding for https://fhir.hl7.at/r5-AGES-MedicinalProduct-review/StructureDefinition-at-medprod-coding.html)
+  - Do the profiles for "OtherResources", the "ValueSets" as well as the "Extensions" stem from the EMA IG which is not yet public?
+    - if yes: they should already contain the canonical from the EMA IG in order to be able to integrate the EMA IG once it is published.
+    - if not: adapt to naming governance
+- Use of publisher in value sets - when is EMA when is AGES?
+- To have a verifiable transition from ASP-Liste to FHIR IG, ConceptMaps are to be defined (e.g.: "Zulassungsstatus")
+  - For that the corresponding code systems and value sets which are used now should also be specified.
+- Examples ASP -> FHIR would be great

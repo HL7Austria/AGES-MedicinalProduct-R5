@@ -1,17 +1,18 @@
-Profile:  at-emed-PackagedProductDefinition
+Profile:  AT_MedicinalProduct_PackagedProductDefinition
 Parent:   PackagedProductDefinition
-Id:       at-emed-PackagedProductDefinition
+Id:       at-medprod-packagedproductdefinition
 Title:    "Packaged product definition"
-Description: "Defines the Package information of a Medicinal Product"
+Description: "Defines the package information of a medicinal product"
 
 * id 1..1
 * packageFor 1..1
-* packageFor only Reference(http://hl7.org/fhir/StructureDefinition/MedicinalProductDefinition)
+* packageFor only Reference(AT_MedicinalProduct_MedicinalProductDefinition)
 
 
 
 // PZN
 * identifier 1..1
+* identifier only AT_MedicinalProduct_Identifier
 * identifier.system = $PZNUrl
 
 // Delivery State of the package - Status der Packung
