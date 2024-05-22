@@ -49,6 +49,13 @@ inventedName 1..1 // Invented Name - Zulassungsname
 * combinedPharmaceuticalDoseForm 1..1
 * combinedPharmaceuticalDoseForm only RefTermCodeableConcept
 
+* combinedPharmaceuticalDoseForm.coding ^slicing.discriminator.type = #pattern
+* combinedPharmaceuticalDoseForm.coding ^slicing.discriminator.path = "system"
+* combinedPharmaceuticalDoseForm.coding ^slicing.rules = #closed
+* combinedPharmaceuticalDoseForm.coding ^slicing.description = "One of 4 Lists can be a dose form"
+* combinedPharmaceuticalDoseForm.coding ^slicing.ordered = false
+
+*combinedPharmaceuticalDoseForm.coding[doseform1].system = $doseform1 (exactly)
 
 // Prescription requirements - Rezeptpflichtstatus
 
