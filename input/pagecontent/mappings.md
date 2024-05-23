@@ -1,22 +1,17 @@
 <table class="grid">
 <tbody>
   <tr>
-    <th>List of medicinal products"ASP-Liste"</th>
-    <th></th>
-    <th>FHIR resources</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="2"><strong>List of medicinal products"ASP-Liste"</strong></th>
+    <th colspan="5"><strong>FHIR resources</strong></th>
   </tr>
   <tr>
-    <td>Description</td>
-    <td>CodeSystem</td>
-    <td>PackagedProductDefinition</td>
-    <td>MedicinalProductDefinition</td>
-    <td>RegulatedAuthorization</td>
-    <td>AdministrableProductDefinition</td>
-    <td>Ingredient</td>
+    <td><strong>Description</td>
+    <td><strong>CodeSystem</td>
+    <td><strong><a href="StructureDefinition-at-medprod-packagedProductDefinition.html">PackagedProductDefinition</a></strong></td>
+    <td><strong><a href="StructureDefinition-at-medprod-medicinalProductDefinition.html">MedicinalProductDefinition</a></strong></td>
+    <td><strong><a href="StructureDefinition-at-medprod-marketingRegulatedAuthorization.html">RegulatedAuthorization</a></strong></td>
+    <td><strong><a href="StructureDefinition-at-medprod-administrableProductDefinition.html">AdministrableProductDefinition</a></strong></td>
+    <td><strong><a href="StructureDefinition-at-medprod-ingredient.html">Ingredient</a></strong></td>
   </tr>
   <tr>
     <td>Pharmaceutical registration number<br>Pharmazentralnummer (PZN)</td>
