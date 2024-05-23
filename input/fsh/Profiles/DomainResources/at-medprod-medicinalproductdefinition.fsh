@@ -24,9 +24,9 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * identifier[GRZ] only AT_MedicinalProduct_Identifier
 
 // Domain - Domäne (Nur Human)
+* domain ^short = "Domain"
 * domain only AT_MedicinalProduct_CodeableConcept
 * domain.coding from DomainVs (required)
-
 
 // Authorisation Name (Full Name) - Name der Arzneispezialität
 * name.productName ^short = "Authorization Name"
@@ -43,17 +43,20 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 inventedName 1..1 and // Invented Name - Part name
 tradeName 1..1 // Trade Name - Handelsname
 
-* name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002
 * name.part[inventedName].type ^short = "Part name"
-* name.part[tradeName].type = AdditionalMedicinalProductNamePartTypeCs#tradeName
+* name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002
 * name.part[tradeName].type ^short = "Trade name"
+* name.part[tradeName].type = AdditionalMedicinalProductNamePartTypeCs#tradeName
+
 //* name.part[pharmaceuticalDoseForm].type = MedicinalProductNamePartTypeCs#220000000005
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
+* combinedPharmaceuticalDoseForm ^short = "Pharmaceutical dose form"
 * combinedPharmaceuticalDoseForm 1..1
 * combinedPharmaceuticalDoseForm only AT_MedicinalProduct_CodeableConcept
 
 // Prescription requirements - Rezeptpflichtstatus
+* legalStatusOfSupply ^short = "Prescription requirement state"
 * legalStatusOfSupply 1..1
 * legalStatusOfSupply only AT_MedicinalProduct_CodeableConcept
 * legalStatusOfSupply from legalStatusForTheSupplyVs
@@ -71,10 +74,14 @@ tradeName 1..1 // Trade Name - Handelsname
     ATCCodeRMS 0..1 and
     ATCCodeWHO 0..1
 
+* classification.coding[interactionRelevance].system ^short = "Drug intercation"
 * classification.coding[interactionRelevance].system = $interactionRelevance // Drug Interaction - Wechselwirkung (ELGA_MedikationWechselwirkungsRelevant)
+* classification.coding[elgaImpfziel].system ^short = "Immunization target"
 * classification.coding[elgaImpfziel].system = $elgaImpfziel // Immunisation target combination - Kombinationsimpfung
 * classification.coding[ATCCodeRMS].system = $ATCCodeRMS // ATC Code
+* classification.coding[ATCCodeWHO].system ^short = "WHO ATC"
 * classification.coding[ATCCodeWHO].system = $ATCCodeWHO // ATC Code
+
 // TODO Lebendimpfstoff
 
 
