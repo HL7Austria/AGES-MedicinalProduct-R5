@@ -29,7 +29,7 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 
 
 // Authorisation Name (Full Name) - Name der Arzneispezialität
-* name.type only AT_MedicinalProduct_CodeableConcept
+* name.productName ^short = "Authorization Name"
 
 // Name parts (slices):
 * name.part ^slicing.discriminator.type = #value
@@ -65,7 +65,7 @@ tradeName 1..1 // Trade Name - Handelsname
 * classification.coding ^slicing.rules = #open
 * classification.coding ^slicing.description = "Classification contains ATC Code WHO, ATC Code RMS, Immunisation Target, Lebendimpfstoff, Wechselwirkung"
 * classification.coding ^slicing.ordered = false
-* classification.coding contains 
+* classification.coding contains
     interactionRelevance 0..1 and
     elgaImpfziel 0..1 and
     ATCCodeRMS 0..1 and
