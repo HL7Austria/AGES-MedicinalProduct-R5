@@ -51,6 +51,11 @@ publisher:
 #     title: Examples Overview
 #     simpleExamples.xml:
 #     complexExamples.xml:
+pages:
+  index.md:
+    title: Home
+  mappings.md:
+    title: Representing medicinal product code systems as FHIR resources
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -76,6 +81,7 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Mapping: mapping.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
