@@ -40,10 +40,13 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
 * name.part.type.coding only AT_MedicinalProduct_Coding
 * name.part contains
-inventedName 1..1 // Invented Name - Zulassungsname
-// Todo: Trade Name - Handelsname
+inventedName 1..1 and // Invented Name - Part name
+tradeName 1..1 // Trade Name - Handelsname
 
 * name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002
+* name.part[inventedName].type ^short = "Part name"
+* name.part[tradeName].type = AdditionalMedicinalProductNamePartTypeCs#tradeName
+* name.part[tradeName].type ^short = "Trade name"
 //* name.part[pharmaceuticalDoseForm].type = MedicinalProductNamePartTypeCs#220000000005
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
