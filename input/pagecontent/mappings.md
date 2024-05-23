@@ -5,8 +5,8 @@
     <th colspan="5"><strong>FHIR resources</strong></th>
   </tr>
   <tr>
-    <td><strong>Description</td>
-    <td><strong>CodeSystem</td>
+    <td><strong>Description</strong></td>
+    <td><strong>CodeSystem</strong></td>
     <td><strong><a href="StructureDefinition-at-medprod-packagedProductDefinition.html">PackagedProductDefinition</a></strong></td>
     <td><strong><a href="StructureDefinition-at-medprod-medicinalProductDefinition.html">MedicinalProductDefinition</a></strong></td>
     <td><strong><a href="StructureDefinition-at-medprod-marketingRegulatedAuthorization.html">RegulatedAuthorization</a></strong></td>
