@@ -27,11 +27,11 @@ The following table maps all relevant fields and attributes of the "ASP-Liste" (
   <tr>
     <td>Trade name</td>
     <td>.concept[x].display</td>
-    <td>TODO</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>-</td>
+    <td>.name.part.where(type.coding.code='tradeName')</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td></td>
@@ -146,7 +146,7 @@ The following table maps all relevant fields and attributes of the "ASP-Liste" (
     <td>Part name</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_PartName</code></td>
     <td>-</td>
-    <td>.name.part</td>
+    <td>.name.part.where(type.coding.code='220000000002')</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
