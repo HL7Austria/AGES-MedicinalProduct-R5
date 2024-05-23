@@ -13,6 +13,7 @@ Description: "Defines the package information of a medicinal product"
 * identifier 1..1
 * identifier only AT_MedicinalProduct_Identifier
 * identifier.system = $PZNUrl
+* identifier ^short = "Pharmaceutical registration number (Pharmazentralnummer (PZN))"
 
 // Delivery State of the package - Status der Packung
 * marketingStatus 1..1
