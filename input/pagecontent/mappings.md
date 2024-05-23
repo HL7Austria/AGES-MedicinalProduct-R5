@@ -1,7 +1,9 @@
+The following table maps all relevant fields and attributes of the "ASP-Liste" ([https://termgit.elga.gv.at/CodeSystem/asp-liste](https://termgit.elga.gv.at/CodeSystem/asp-liste)) and the "eImpf_Impfstoffe" ([https://termgit.elga.gv.at/CodeSystem/eimpf-impfstoffe](https://termgit.elga.gv.at/CodeSystem/eimpf-impfstoffe)) to FHIR resources.
+
 <table class="grid">
 <tbody>
   <tr>
-    <th colspan="2"><strong>List of medicinal products"ASP-Liste"</strong></th>
+    <th colspan="2"><strong>List of medicinal products ("ASP-Liste" or "eImpf_Impfstoffe")</strong></th>
     <th colspan="5"><strong>FHIR resources</strong></th>
   </tr>
   <tr>
@@ -16,7 +18,7 @@
   <tr>
     <td>Pharmaceutical registration number<br>Pharmazentralnummer (PZN)</td>
     <td>.concept[x].code</td>
-    <td>.identifier <br> system="https://argepharma.fcio.at"</td>
+    <td>.identifier</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -43,7 +45,7 @@
     <td>.name.productName</td>
     <td>-</td>
     <td>-</td>
-    <td></td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Authorization number</td>
@@ -52,7 +54,7 @@
     <td>-</td>
     <td>.identifier</td>
     <td>-</td>
-    <td></td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Authorization state</td>
@@ -61,7 +63,7 @@
     <td>-</td>
     <td>.status.coding</td>
     <td>-</td>
-    <td></td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Authorization holder</td>
@@ -70,7 +72,7 @@
     <td>-</td>
     <td>.holder</td>
     <td>-</td>
-    <td></td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Validity</td>
@@ -94,19 +96,19 @@
     <td>Size / Weight of the package</td>
     <td><code class="highlighter-rouge language-plaintext">GroesseGewicht</code></td>
     <td>.containedItemQuantity.value</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Unit to size / weight</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_MedikationMengenart_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_MedikationMengenart_text</code></td>
-    <td>.containedItemQuantity.code, .containedItemQuantity.system</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>.containedItemQuantity.code<br/>.containedItemQuantity.unit</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>Prescription requirement state</td>
@@ -129,17 +131,13 @@
   <tr>
     <td>Immunization target combination</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_ImpfungIndikation_K_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_ImpfungIndikation_K_text</code></td>
-    <td>not mapped</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td colspan="5"><i>not mapped</i></td>
   </tr>
   <tr>
     <td>Immunization target</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_ImpfungIndikation_XX_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_ImpfungIndikation_XX_text</code></td>
     <td>-</td>
-    <td>.classification.coding</td>
+    <td>.classification.coding.where(system='https://termgit.elga.gv.at/CodeSystem/eimpf-ergaenzung')</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -157,7 +155,7 @@
     <td>ATC code</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_whoATC_XX_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_whoATC_XX_text</code></td>
     <td>-</td>
-    <td>.classification.coding</td>
+    <td>.classification.coding.where(system='http://www.whocc.no/atc')</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -178,7 +176,7 @@
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>.substance.code.concept.coding</td>
+    <td>.substance.code.concept.coding.where(system='https://www.ages.at/fhir/GRZ')</td>
   </tr>
   <tr>
     <td>Active ingredient</td>
@@ -187,7 +185,7 @@
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>.substance.code.concept.coding</td>
+    <td>.substance.code.concept.coding.where(system='https://spor.ema.europa.eu/v3/SubstanceDefinition')</td>
   </tr>
   <tr>
     <td>Ingredient Role</td>
@@ -210,10 +208,10 @@
   <tr>
     <td>Reference Ingredient</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_ReferenceIngredient_XX_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_ReferenceIngredient_XX_text</code></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>.substance.strength.referenceStrength.substance</td>
   </tr>
   <tr>
@@ -238,7 +236,7 @@
     <td>Drug Interaction</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_MedikationWechselwirkungsRelevant</code></td>
     <td></td>
-    <td>.classification.coding, coding=interactionRelevance</td>
+    <td>.classification.coding.where(system='https://www.ages.at/fhir/interactionRelevance')</td>
     <td></td>
     <td></td>
     <td></td>
@@ -254,7 +252,7 @@
   </tr>
   <tr>
     <td></td>
-    <td><code class="highlighter-rouge language-plaintext">status</code></td> 
+    <td><code class="highlighter-rouge language-plaintext">status</code></td>
     <td>TODO</td>
     <td></td>
     <td></td>
