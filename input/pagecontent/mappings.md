@@ -16,7 +16,7 @@
   <tr>
     <td>Pharmaceutical registration number<br>Pharmazentralnummer (PZN)</td>
     <td>.concept[x].code</td>
-    <td>.identifier</td>
+    <td>.identifier <br> system="https://argepharma.fcio.at"</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -93,7 +93,7 @@
   <tr>
     <td>Size / Weight of the package</td>
     <td><code class="highlighter-rouge language-plaintext">GroesseGewicht</code></td>
-    <td>TODO</td>
+    <td>.containedItemQuantity.value</td>
     <td></td>
     <td></td>
     <td></td>
@@ -102,7 +102,7 @@
   <tr>
     <td>Unit to size / weight</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_MedikationMengenart_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_MedikationMengenart_text</code></td>
-    <td>TODO</td>
+    <td>.containedItemQuantity.code, .containedItemQuantity.system</td>
     <td></td>
     <td></td>
     <td></td>
@@ -120,7 +120,7 @@
   <tr>
     <td>Package type container</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_Packaging_XX_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_Packaging_XX_text</code></td>
-    <td>.packaging.type<br><br>TODO multiple values would have to be allowed</td>
+    <td>.packaging.type<br> Additional packaging.type can be added in additional packagagings via the self reference .packaging.packaging</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -210,11 +210,11 @@
   <tr>
     <td>Reference Ingredient</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_ReferenceIngredient_XX_code</code><br><code class="highlighter-rouge language-plaintext">ELGA_ReferenceIngredient_XX_text</code></td>
-    <td>TODO</td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
+    <td>.substance.strength.referenceStrength.substance</td>
   </tr>
   <tr>
     <td>Reference Ingredient Strength &amp; Unit</td>
@@ -223,7 +223,7 @@
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>.substance.strength.referenceStrength</td>
+    <td>.substance.strength.referenceStrength.strength[x]</td>
   </tr>
   <tr>
     <td>Pharmaceutical dose form</td>
@@ -237,8 +237,8 @@
   <tr>
     <td>Drug Interaction</td>
     <td><code class="highlighter-rouge language-plaintext">ELGA_MedikationWechselwirkungsRelevant</code></td>
-    <td>TODO</td>
     <td></td>
+    <td>.classification.coding, coding=interactionRelevance</td>
     <td></td>
     <td></td>
     <td></td>
@@ -247,14 +247,14 @@
     <td>Domain</td>
     <td><code class="highlighter-rouge language-plaintext">Domaene</code></td>
     <td>-</td>
-    <td>.domain</td>
+    <td>.domain (always human)</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
   <tr>
     <td></td>
-    <td><code class="highlighter-rouge language-plaintext">status</code></td>
+    <td><code class="highlighter-rouge language-plaintext">status</code></td> 
     <td>TODO</td>
     <td></td>
     <td></td>
