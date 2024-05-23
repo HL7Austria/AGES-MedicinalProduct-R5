@@ -41,4 +41,4 @@ and substanceSMS 0..1 // Substance Code SMS - English (ELGA_ActiveIngredient)
 
 // Reference Ingredient Strength - Referenzsubstanz Stärke (ELGA_Reference_low_strength, ELGA_Reference_low_strength_unit)
 * substance.strength.referenceStrength.substance ^short = "Reference ingredient"
-* substance.strength.referenceStrength.substance.strength[x] ^short = "Reference ingredient strength & unit"
+* substance.strength.referenceStrength.strength[x] ^short = "Reference ingredient strength & unit"
