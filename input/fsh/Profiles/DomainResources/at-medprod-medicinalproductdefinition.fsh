@@ -24,12 +24,12 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * identifier[GRZ] only AT_MedicinalProduct_Identifier
 
 // Domain - Domäne (Nur Human)
-* domain ^short = "Domain"
+* domain ^short = "If this medicine applies to human or veterinary uses (domain)"
 * domain only AT_MedicinalProduct_CodeableConcept
 * domain.coding from DomainVs (required)
 
 // Authorisation Name (Full Name) - Name der Arzneispezialität
-* name.productName ^short = "Authorization Name"
+* name.productName ^short = "The full product name (authorization name)"
 
 // Name parts (slices):
 * name.part ^slicing.discriminator.type = #value
@@ -51,12 +51,12 @@ tradeName 1..1 // Trade Name - Handelsname
 //* name.part[pharmaceuticalDoseForm].type = MedicinalProductNamePartTypeCs#220000000005
 
 // Pharmaceutical Dose Form - Darreichungsform (ELGA_MedikationDarreichungsform)
-* combinedPharmaceuticalDoseForm ^short = "Pharmaceutical dose form"
+* combinedPharmaceuticalDoseForm ^short = "The dose form for a single part product, or combined form of a multiple part product (pharmaceutical dose form)"
 * combinedPharmaceuticalDoseForm 1..1
 * combinedPharmaceuticalDoseForm only AT_MedicinalProduct_CodeableConcept
 
 // Prescription requirements - Rezeptpflichtstatus
-* legalStatusOfSupply ^short = "Prescription requirement state"
+* legalStatusOfSupply ^short = "The legal status of supply of the medicinal product as classified by the regulator (prescription requirement state)"
 * legalStatusOfSupply 1..1
 * legalStatusOfSupply only AT_MedicinalProduct_CodeableConcept
 * legalStatusOfSupply from legalStatusForTheSupplyVs
