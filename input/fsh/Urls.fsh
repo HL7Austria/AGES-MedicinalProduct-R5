@@ -1,5 +1,5 @@
 // Systems
-Alias: $PZNUrl = https://argepharma.fcio.at
+Alias: $PZNUrl = https://argepharma.fcio.at // TODO discuss PZN canonical
 Alias: $substancePharosUrl = https://www.ages.at/fhir/GRZ
 Alias: $substanceSMSUrl = https://spor.ema.europa.eu/v3/SubstanceDefinition
 Alias: $GRZ = https://www.ages.at/fhir/GRZ
