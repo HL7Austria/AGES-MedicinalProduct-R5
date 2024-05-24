@@ -1,7 +1,8 @@
 ValueSet: DomainVs
 Id: domainVs
 Title: "The Domain Value Set"
-* ^url = "https://ema.europa.eu/fhir/vs/domain"
-* insert PublisherEMA
+* ^url = "https://www.ages.at/fhir/domain"
+* insert PublisherAGES
 * ^status = #active
-* include codes from system DomainCs // TODO: where concept.property[0].valueCode is-a "valid"
+* $domain#100000000012
+* $domain#100000000014
