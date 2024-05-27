@@ -37,8 +37,9 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * name.part ^slicing.description = "Slice based on the part.type.coding.code"
 * name.part ^slicing.ordered = false
 * name.part ^slicing.rules = #open
+* name.part.type.coding 1..1
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
-* name.part.type.coding only AT_MedicinalProduct_Coding
+* name.part.type only AT_MedicinalProduct_CodeableConcept
 * name.part contains
 inventedName 1..1 and // Invented Name - Part name
 tradeName 1..1 // Trade Name - Handelsname
@@ -71,14 +72,15 @@ tradeName 1..1 // Trade Name - Handelsname
 * classification.coding contains
     interactionRelevance 0..1 and
     elgaImpfziel 0..1 and
-    ATCCodeRMS 0..1 and
-    ATCCodeWHO 0..1
+    ATCCodePharos 1..* and
+    ATCCodeWHO 0..*
 
 * classification.coding[interactionRelevance].system ^short = "Drug intercation"
 * classification.coding[interactionRelevance].system = $interactionRelevance // Drug Interaction - Wechselwirkung (ELGA_MedikationWechselwirkungsRelevant)
 * classification.coding[elgaImpfziel].system ^short = "Immunization target"
 * classification.coding[elgaImpfziel].system = $elgaImpfziel // Immunisation target combination - Kombinationsimpfung
-* classification.coding[ATCCodeRMS].system = $ATCCodeRMS // ATC Code
+* classification.coding[ATCCodePharos].system = $ATCCodePharos // ATC Code
+* classification.coding[ATCCodePharos].system ^short = "ATC Codes from RMS merged with local Austrian codes"
 * classification.coding[ATCCodeWHO].system ^short = "WHO ATC"
 * classification.coding[ATCCodeWHO].system = $ATCCodeWHO // ATC Code
 

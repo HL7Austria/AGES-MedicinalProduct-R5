@@ -5,13 +5,12 @@ Title:    "Ingredient"
 Description: "Defines the strength and composition parts of a medicinal product"
 
 * for 1..1
+* for only Reference(AT_MedicinalProduct_ManufacturedItemDefinition or AT_MedicinalProduct_AdministrableProductDefinition)
 
 // ID Ingredient GRZ
 * identifier 1..1
 * identifier only AT_MedicinalProduct_Identifier
 * identifier.system = $GRZ
-
-// * for only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition)
 
 // Active Ingredient Role - Substanzrolle (ELGA_Ingredient_role)
 * role ^short = "Purpose of the ingredient within the product, e.g. active, inactive (ingredient role)"

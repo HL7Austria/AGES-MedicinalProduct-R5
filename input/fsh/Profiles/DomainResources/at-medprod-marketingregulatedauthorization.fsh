@@ -34,3 +34,5 @@ Description: "Contains the authorisation information of a medicinal product"
 * holder.identifier.system = "https://spor.ema.europa.eu/omswi"
 * holder.identifier.value ^short = "This value contains the Location ID from the EMA SPOR OMS System"
 * holder.identifier.value 1..1
+* holder.display 1..1
+* holder.display ^short = "The name of the marketing authorisation holder"
