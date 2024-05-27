@@ -10,6 +10,7 @@ Alias: $elgaImpfziel = https://termgit.elga.gv.at/CodeSystem/eimpf-ergaenzung
 Alias: $interactionRelevance = https://www.ages.at/fhir/interactionRelevance
 Alias: $ATCCodeWHO = http://www.whocc.no/atc
 Alias: $OMS = https://spor.ema.europa.eu/v1/locations
+Alias: $domain = https://spor.ema.europa.eu/v1/lists/100000000004
 
 // Lists
 Alias: $anatomicalTherapeuticChemicalClassificationSystemHumanUrl = https://spor.ema.europa.eu/v1/lists/100000093533 // not used

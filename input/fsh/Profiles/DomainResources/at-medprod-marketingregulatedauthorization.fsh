@@ -9,7 +9,7 @@ Description: "Contains the authorisation information of a medicinal product"
 * subject only Reference (AT_MedicinalProduct_MedicinalProductDefinition)
 
 // Authorisation Number - Zulassungsnummer
-* identifier ^short = "Authorization number"
+* identifier ^short = "Business identifier for the authorization, typically assigned by the authorizing body (authorization number)"
 * identifier 1..1
 * identifier.system = $marketingAuthorizationNumberUrl
 * identifier only AT_MedicinalProduct_Identifier
@@ -20,7 +20,7 @@ Description: "Contains the authorisation information of a medicinal product"
 * type = RegulatoryEntitlementTypeCs#220000000061
 
 // Authorisation State - Zulassungsstatus
-* status ^short = "Authorization status"
+* status ^short = "The status that is authorised e.g. approved. Intermediate states can be tracked with cases and applications (authorization status)"
 * status 1..1
 * status only AT_MedicinalProduct_CodeableConcept
 * status.coding from RegulatoryEntitlementStatusVs
@@ -28,7 +28,7 @@ Description: "Contains the authorisation information of a medicinal product"
 // Validity - Gültigkeit des Zulassungsstatus //TODO Elga
 
 // Authorisation  - Zulassungsinhaber
-* holder ^short = "Authorization holder"
+* holder ^short = "The organization that has been granted this authorization, by the regulator (authorization holder)"
 * holder.identifier 1..1
 * holder.identifier.system 1..1
 * holder.identifier.system = "https://spor.ema.europa.eu/omswi"

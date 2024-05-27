@@ -28,6 +28,6 @@ Description: "Required for the attribute Route of Administration"
 * producedFrom only Reference(AT_MedicinalProduct_ManufacturedItemDefinition)
 
 //* routeOfAdministration 1..* - Inherited Cardinality
-* routeOfAdministration ^short = "Route of administration"
+* routeOfAdministration ^short = "The path by which the product is taken into or makes contact with the body (route of administration)."
 * routeOfAdministration.code only AT_MedicinalProduct_CodeableConcept
 * routeOfAdministration.code from RoutesAndMethodsOfAdministrationVs
