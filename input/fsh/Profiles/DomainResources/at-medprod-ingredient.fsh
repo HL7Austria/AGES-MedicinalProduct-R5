@@ -7,6 +7,9 @@ Description: "Defines the strength and composition parts of a medicinal product"
 * for 1..1
 
 // ID Ingredient GRZ
+* identifier 1..1
+* identifier only AT_MedicinalProduct_Identifier
+* identifier.system = $GRZ
 
 // * for only Reference(http://hl7.org/fhir/StructureDefinition/ManufacturedItemDefinition)
 

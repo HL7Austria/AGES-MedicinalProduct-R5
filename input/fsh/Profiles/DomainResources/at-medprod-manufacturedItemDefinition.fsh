@@ -5,6 +5,9 @@ Title:    "Manufactured item definition"
 Description: "Manufactured Items are required to maintain the link between Ingredient and Packaged Medicinal Product"
 
 // ID Fortlaufende Nr (PHAROS ADMPRO Ref Nr)
+* identifier 1..1
+* identifier only AT_MedicinalProduct_Identifier
+* identifier.system = $GRZ
 
 // Shortcut could be maintained
 //* extension 1..1
