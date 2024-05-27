@@ -37,16 +37,16 @@ Description: "Medicinal Product Definition profiled resource containing a subset
 * name.part ^slicing.description = "Slice based on the part.type.coding.code"
 * name.part ^slicing.ordered = false
 * name.part ^slicing.rules = #open
-* name.part.type.coding 1..1
 * name.part.type.coding from MedicinalProductNamePartTypeVs (required)
-* name.part.type only AT_MedicinalProduct_CodeableConcept
 * name.part contains
 inventedName 1..1 and // Invented Name - Part name
 tradeName 1..1 // Trade Name - Handelsname
 
 * name.part[inventedName].type ^short = "Part name"
+* name.part[inventedName].type only AT_MedicinalProduct_CodeableConcept
 * name.part[inventedName].type = MedicinalProductNamePartTypeCs#220000000002
 * name.part[tradeName].type ^short = "Trade name"
+* name.part[tradeName].type only AT_MedicinalProduct_CodeableConcept
 * name.part[tradeName].type = AdditionalMedicinalProductNamePartTypeCs#tradeName
 
 //* name.part[pharmaceuticalDoseForm].type = MedicinalProductNamePartTypeCs#220000000005
