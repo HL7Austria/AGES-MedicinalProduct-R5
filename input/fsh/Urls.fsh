@@ -11,6 +11,7 @@ Alias: $interactionRelevance = https://www.ages.at/fhir/interactionRelevance
 Alias: $ATCCodeWHO = http://www.whocc.no/atc
 Alias: $OMS = https://spor.ema.europa.eu/v1/locations
 Alias: $domain = https://spor.ema.europa.eu/v1/lists/100000000004
+Alias: $cs-sct = http://snomed.info/sct
 
 // Lists
 Alias: $routesAndMethodsOfAdministrationUrl = https://spor.ema.europa.eu/v1/lists/100000073345 
