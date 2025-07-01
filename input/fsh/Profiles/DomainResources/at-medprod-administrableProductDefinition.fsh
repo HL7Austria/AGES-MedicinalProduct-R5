@@ -1,6 +1,6 @@
 Profile:  AT_MedicinalProduct_AdministrableProductDefinition
 Parent:   AdministrableProductDefinition
-Id:       at-medprod-administrableProductDefinition
+Id:       at-medprod-administrableproductdefinition
 Title:    "Administrable product definition"
 Description: "Required for the attribute Route of Administration"
 

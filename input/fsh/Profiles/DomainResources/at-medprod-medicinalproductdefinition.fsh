@@ -1,6 +1,6 @@
 Profile:  AT_MedicinalProduct_MedicinalProductDefinition
 Parent:   MedicinalProductDefinition
-Id:       at-medprod-medicinalProductDefinition
+Id:       at-medprod-medicinalproductdefinition
 Title:    "Medicinal Product Definition"
 Description: "Medicinal Product Definition profiled resource containing a subset of attributes needed for the Austrian eHealth Community"
 

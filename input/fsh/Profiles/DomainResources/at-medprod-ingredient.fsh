@@ -5,7 +5,7 @@ Title:    "Ingredient"
 Description: "Defines the strength and composition parts of a medicinal product"
 
 * for 1..1
-* for only Reference(AT_MedicinalProduct_ManufacturedItemDefinition or AT_MedicinalProduct_AdministrableProductDefinition)
+// * for only Reference(AT_MedicinalProduct_ManufacturedItemDefinition or AT_MedicinalProduct_AdministrableProductDefinition)
 
 // ID Ingredient GRZ
 * identifier 1..1

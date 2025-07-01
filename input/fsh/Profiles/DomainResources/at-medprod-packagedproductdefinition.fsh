@@ -1,6 +1,6 @@
 Profile:  AT_MedicinalProduct_PackagedProductDefinition
 Parent:   PackagedProductDefinition
-Id:       at-medprod-packagedProductDefinition
+Id:       at-medprod-packagedproductdefinition
 Title:    "Packaged product definition"
 Description: "Defines the package information of a medicinal product"
 

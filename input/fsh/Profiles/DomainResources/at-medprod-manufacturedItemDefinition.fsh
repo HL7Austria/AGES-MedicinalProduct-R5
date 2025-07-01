@@ -1,6 +1,6 @@
 Profile:  AT_MedicinalProduct_ManufacturedItemDefinition
 Parent:   ManufacturedItemDefinition
-Id:       at-medprod-manufacturedItemDefinition
+Id:       at-medprod-manufactureditemdefinition
 Title:    "Manufactured item definition"
 Description: "Manufactured Items are required to maintain the link between Ingredient and Packaged Medicinal Product"
 

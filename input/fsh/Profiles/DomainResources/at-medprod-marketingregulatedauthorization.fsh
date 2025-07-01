@@ -1,6 +1,6 @@
 Profile:  AT_MedicinalProduct_MarketingRegulatedAuthorization
 Parent:   RegulatedAuthorization
-Id:       at-medprod-marketingRegulatedAuthorization
+Id:       at-medprod-marketingregulatedauthorization
 Title:    "Marketing Regulated Authorization"
 Description: "Contains the authorisation information of a medicinal product"
 
