@@ -1,15 +1,16 @@
 <Bundle xmlns="http://hl7.org/fhir">
    <id value="asp-liste-9"/>
-   <meta>
-      <versionId value="2.0.0+20240208"/>
-      <lastUpdated value="2025-06-25T17:08:49.470+02:00"/>
-   </meta>
+   <!-- <meta> -->
+      <!-- <versionId value="2.0.0+20240208"/>  --> <!-- not to be set by exporter -->
+      <!-- <lastUpdated value="2025-06-25T17:08:49.470+02:00"/> --> <!-- should be moved to Bundle.timestamp -->
+   <!-- </meta> -->
    <identifier>
       <value value="1.2.40.0.34.4.16"/>
    </identifier>
    <type value="collection"/>
+   <timestamp value="2025-06-25T17:08:49.470+02:00"/>
    <entry>
-      <fullUrl value="MedicinalProductDefinition/101273992"/>
+      <fullUrl value="https://www.ages.at/MedicinalProductDefinition/101273992"/> <!-- muss be a full URL --> <!-- within the Bundle best to use urn:uuid for fullUrl, id and references-->
       <resource>
          <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
             <id value="101273992"/>
@@ -24,7 +25,7 @@
                   </extension>
                   <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
                   <code value="100000000012"/>
-                  <display value="Human"/>
+                  <display value="Human use"/> <!-- use correct display names -->
                </coding>
             </domain>
             <combinedPharmaceuticalDoseForm>
@@ -32,8 +33,8 @@
                   <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
                      <valueString value="Combined Pharmaceutical Dose Form"/>
                   </extension>
-                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
-                  <code value="100000116186"/>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000004"/> <!-- 200000000006 has been used before - maybe 200000000004 shall be used? CodeSystem and code do not match -->
+                  <code value="100000116186"/> <!-- belongs to https://spor.ema.europa.eu/v1/lists/200000000004 -->
                   <display value="Pulver zur Herstellung einer Injektions-/Infusionslösung"/>
                </coding>
             </combinedPharmaceuticalDoseForm>
@@ -43,7 +44,7 @@
                      <valueString value="Legal Status for the Supply"/>
                   </extension>
                   <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
-                  <code value="200000017698"/>
+                  <code value="200000017698"/> <!-- Veterinary medicinal product subject to veterinary prescription - does not match german text -->
                   <display value="Arzneimittel zur einmaligen Abgabe auf aerztliche Verschreibung"/>
                </coding>
             </legalStatusOfSupply>
@@ -52,14 +53,15 @@
                   <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
                      <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
                   </extension>
-                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/> <!-- CodeSystem should be included in IG -->
                   <code value="100000096140"/>
                   <display value="Benzylpenicillin"/>
                </coding>
                <coding>
-                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                  <!-- no extension is necessary here -->
+                  <!-- <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
                      <valueString value="???"/>
-                  </extension>
+                  </extension> -->
                   <system value="http://www.whocc.no/atc"/>
                   <code value="J01CE01"/>
                   <display value="Benzylpenicillin"/>
@@ -72,12 +74,12 @@
       </resource>
    </entry>
    <entry>
-      <fullUrl value="PackagedProductDefinition/6058839"/>
+      <fullUrl value="https://www.ages.at/PackagedProductDefinition/6058839"/>
       <resource>
          <PackagedProductDefinition xmlns="http://hl7.org/fhir">
             <id value="6058839"/>
             <identifier>
-               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/> <!-- What kind of identifier is this - not specified in IG -->
                <value value="6058839"/>
             </identifier>
             <packageFor>
@@ -86,7 +88,7 @@
             <containedItemQuantity>
                <value value="10.0"/>
                <unit value="Durchstechflasche"/>
-               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/> <!-- https://spor.ema.europa.eu/v1/lists/200000000014 has to be used here -->
                <code value="200000002158"/>
             </containedItemQuantity>
             <marketingStatus>
@@ -117,7 +119,7 @@
       </resource>
    </entry>
    <entry>
-      <fullUrl value="RegulatedAuthorization/142464"/>
+      <fullUrl value="https://www.ages.at/RegulatedAuthorization/142464"/>
       <resource>
          <RegulatedAuthorization xmlns="http://hl7.org/fhir">
             <id value="142464"/>
@@ -139,31 +141,41 @@
                </coding>
             </status>
             <holder>
-               <reference value="LOC-100001746"/>
+               <!-- wrongly created -->
+               <identifier>
+                  <system value="https://spor.ema.europa.eu/omswi"/>
+                  <value value="LOC-100001746"/>
+               </identifier>
                <display value="Fresenius Kabi Austria GmbH"/>
             </holder>
          </RegulatedAuthorization>
       </resource>
    </entry>
    <entry>
-      <fullUrl value="AdministrableProductDefinition/2038377"/>
+      <fullUrl value="https://www.ages.at/AdministrableProductDefinition/2038377"/>
       <resource>
          <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
             <id value="2038377"/>
             <identifier>
-               <system value="http://ema.europa.eu/fhir/???"/>
+               <system value="http://ema.europa.eu/fhir/???"/> <!-- What kind of identifier is this - not specified in IG -->
                <value value="2038377"/>
             </identifier>
-            <identifier>
+            <!-- duplicated identifier -->
+            <!-- <identifier>
                <system value="http://ema.europa.eu/fhir/???"/>
                <value value="2038377"/>
-            </identifier>
+            </identifier> -->
+            <!-- status missing -->
+            <status value="active"/>
             <formOf>
                <reference value="MedicinalProductDefinition/101273992"/>
             </formOf>
             <routeOfAdministration>
                <code>
                   <coding>
+                     <!-- missing extension -->
+                     <!-- missing system-->
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073345"/>
                      <code value="100000073600"/>
                      <display value="intramuskuläre Anwendung"/>
                   </coding>
@@ -172,6 +184,9 @@
             <routeOfAdministration>
                <code>
                   <coding>
+                     <!-- missing extension -->
+                     <!-- missing system -->
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073345"/>
                      <code value="100000073611"/>
                      <display value="intravenöse Anwendung"/>
                   </coding>
@@ -181,7 +196,7 @@
       </resource>
    </entry>
    <entry>
-      <fullUrl value="Ingredient/1597141"/>
+      <fullUrl value="https://www.ages.at/Ingredient/1597141"/>
       <resource>
          <Ingredient xmlns="http://hl7.org/fhir">
             <id value="1597141"/>
@@ -189,6 +204,8 @@
                <system value="http://ema.europa.eu/fhir/???"/>
                <value value="1597141"/>
             </identifier>
+            <!-- status missing -->
+            <status value="active"/> <!-- assuming active -->
             <for>
                <reference value="AdministrableProductDefinition/2038377"/>
             </for>
@@ -254,7 +271,7 @@
       </resource>
    </entry>
    <entry>
-      <fullUrl value="SubstanceDefinition/7421791"/>
+      <fullUrl value="https://www.ages.at/SubstanceDefinition/7421791"/>
       <resource>
          <SubstanceDefinition xmlns="http://hl7.org/fhir">
             <id value="7421791"/>
