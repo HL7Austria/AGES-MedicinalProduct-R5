@@ -1,0 +1,273 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="asp-liste-9"/>
+   <meta>
+      <versionId value="2.0.0+20240208"/>
+      <lastUpdated value="2025-06-25T17:08:49.470+02:00"/>
+   </meta>
+   <identifier>
+      <value value="1.2.40.0.34.4.16"/>
+   </identifier>
+   <type value="collection"/>
+   <entry>
+      <fullUrl value="MedicinalProductDefinition/101273992"/>
+      <resource>
+         <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="101273992"/>
+            <identifier>
+               <system value="https://www.ages.at/fhir/referenceNumber"/>
+               <value value="101273992"/>
+            </identifier>
+            <domain>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Domain"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
+                  <code value="100000000012"/>
+                  <display value="Human"/>
+               </coding>
+            </domain>
+            <combinedPharmaceuticalDoseForm>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Combined Pharmaceutical Dose Form"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
+                  <code value="100000116186"/>
+                  <display value="Pulver zur Herstellung einer Injektions-/Infusionslösung"/>
+               </coding>
+            </combinedPharmaceuticalDoseForm>
+            <legalStatusOfSupply>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Legal Status for the Supply"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
+                  <code value="200000017698"/>
+                  <display value="Arzneimittel zur einmaligen Abgabe auf aerztliche Verschreibung"/>
+               </coding>
+            </legalStatusOfSupply>
+            <classification>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="100000096140"/>
+                  <display value="Benzylpenicillin"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="J01CE01"/>
+                  <display value="Benzylpenicillin"/>
+               </coding>
+            </classification>
+            <name>
+               <productName value="Penicillin G Kabi 1 Million I.E. Pulver zur Herstellung einer Injektions-/Infusionslösung"/>
+            </name>
+         </MedicinalProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="PackagedProductDefinition/6058839"/>
+      <resource>
+         <PackagedProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="6058839"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <value value="6058839"/>
+            </identifier>
+            <packageFor>
+               <reference value="MedicinalProductDefinition/101273992"/>
+            </packageFor>
+            <containedItemQuantity>
+               <value value="10.0"/>
+               <unit value="Durchstechflasche"/>
+               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <code value="200000002158"/>
+            </containedItemQuantity>
+            <marketingStatus>
+               <status>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Marketing Status"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000072052"/>
+                     <code value="100000072075"/>
+                     <display value="Keine Daten übermittelt"/>
+                  </coding>
+               </status>
+            </marketingStatus>
+            <packaging>
+               <type>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Packaging"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073346"/>
+                     <code value="100000073563"/>
+                     <display value="Durchstechflasche"/>
+                  </coding>
+               </type>
+            </packaging>
+         </PackagedProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="RegulatedAuthorization/142464"/>
+      <resource>
+         <RegulatedAuthorization xmlns="http://hl7.org/fhir">
+            <id value="142464"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/marketingAuthorizationNumber"/>
+               <value value="142464"/>
+            </identifier>
+            <subject>
+               <reference value="MedicinalProductDefinition/101273992"/>
+            </subject>
+            <status>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Regulatory Entitlement Status"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072049"/>
+                  <code value="100000072099"/>
+                  <display value="Valid"/>
+               </coding>
+            </status>
+            <holder>
+               <reference value="LOC-100001746"/>
+               <display value="Fresenius Kabi Austria GmbH"/>
+            </holder>
+         </RegulatedAuthorization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="AdministrableProductDefinition/2038377"/>
+      <resource>
+         <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="2038377"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2038377"/>
+            </identifier>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2038377"/>
+            </identifier>
+            <formOf>
+               <reference value="MedicinalProductDefinition/101273992"/>
+            </formOf>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073600"/>
+                     <display value="intramuskuläre Anwendung"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073611"/>
+                     <display value="intravenöse Anwendung"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+         </AdministrableProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1597141"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1597141"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1597141"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2038377"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1708931"/>
+                        <display value="BENZYLPENICILLIN NATRIUM"/>
+                     </coding>
+                  </concept>
+               </code>
+               <strength>
+                  <presentationRatio>
+                     <numerator>
+                        <value value="1000000.0"/>
+                        <unit value="IE"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/100000110633"/>
+                        <code value="100000110671"/>
+                     </numerator>
+                     <denominator>
+                        <value value="1.0"/>
+                        <unit value="Durchstechflasche"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/>
+                        <code value="200000002158"/>
+                     </denominator>
+                  </presentationRatio>
+                  <referenceStrength>
+                     <substance>
+                        <reference>
+                           <reference value="SubstanceDefinition/7421791"/>
+                        </reference>
+                     </substance>
+                     <strengthRatio>
+                        <numerator>
+                           <value value="938323.0"/>
+                           <unit value="IE"/>
+                           <system value="https://spor.ema.europa.eu/v1/lists/100000110633"/>
+                           <code value="100000110671"/>
+                        </numerator>
+                        <denominator>
+                           <value value="1.0"/>
+                           <unit value="Durchstechflasche"/>
+                           <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/>
+                           <code value="200000002158"/>
+                        </denominator>
+                     </strengthRatio>
+                  </referenceStrength>
+               </strength>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="SubstanceDefinition/7421791"/>
+      <resource>
+         <SubstanceDefinition xmlns="http://hl7.org/fhir">
+            <id value="7421791"/>
+            <code>
+               <code>
+                  <coding>
+                     <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                     <code value="100000091070"/>
+                     <display value="BENZYLPENICILLIN"/>
+                  </coding>
+               </code>
+            </code>
+         </SubstanceDefinition>
+      </resource>
+   </entry>
+</Bundle>

@@ -1,0 +1,491 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="asp-liste-7"/>
+   <meta>
+      <versionId value="2.0.0+20240208"/>
+      <lastUpdated value="2025-06-25T17:12:47.271+02:00"/>
+   </meta>
+   <identifier>
+      <value value="1.2.40.0.34.4.16"/>
+   </identifier>
+   <type value="collection"/>
+   <entry>
+      <fullUrl value="MedicinalProductDefinition/14055394"/>
+      <resource>
+         <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="14055394"/>
+            <identifier>
+               <system value="https://www.ages.at/fhir/referenceNumber"/>
+               <value value="14055394"/>
+            </identifier>
+            <domain>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Domain"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
+                  <code value="100000000012"/>
+                  <display value="Human"/>
+               </coding>
+            </domain>
+            <combinedPharmaceuticalDoseForm>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Combined Pharmaceutical Dose Form"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
+                  <code value="100000073864"/>
+                  <display value="Injektionssuspension"/>
+               </coding>
+            </combinedPharmaceuticalDoseForm>
+            <legalStatusOfSupply>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Legal Status for the Supply"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
+                  <code value="200000017698"/>
+                  <display value="Arzneimittel zur einmaligen Abgabe auf aerztliche Verschreibung"/>
+               </coding>
+            </legalStatusOfSupply>
+            <classification>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="100000160598"/>
+                  <display value="Humaner Papillomvirus-Impfstoff (Typen 6, 11, 16, 18, 31, 33, 45, 52, 58)"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="J07BM03"/>
+                  <display value="Humaner Papillomvirus-Impfstoff (Typen 6, 11, 16, 18, 31, 33, 45, 52, 58)"/>
+               </coding>
+            </classification>
+            <name>
+               <productName value="Gardasil 9 Injektionssuspension in einer Fertigspritze; 9-valenter Humaner Papillomvirus-Impfstoff (rekombinant, adsorbiert)"/>
+            </name>
+         </MedicinalProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="PackagedProductDefinition/4475131"/>
+      <resource>
+         <PackagedProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="4475131"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <value value="4475131"/>
+            </identifier>
+            <packageFor>
+               <reference value="MedicinalProductDefinition/14055394"/>
+            </packageFor>
+            <containedItemQuantity>
+               <value value="1.0"/>
+               <unit value="Flasche"/>
+               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <code value="200000002111"/>
+            </containedItemQuantity>
+            <marketingStatus>
+               <status>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Marketing Status"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000072052"/>
+                     <code value="100000072075"/>
+                     <display value="Keine Daten übermittelt"/>
+                  </coding>
+               </status>
+            </marketingStatus>
+            <packaging>
+               <type>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Packaging"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073346"/>
+                     <code value="100000073497"/>
+                     <display value="Flasche"/>
+                  </coding>
+               </type>
+            </packaging>
+         </PackagedProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="RegulatedAuthorization/EU/1/15/1007/002-004-P1"/>
+      <resource>
+         <RegulatedAuthorization xmlns="http://hl7.org/fhir">
+            <id value="002-004-P1"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/marketingAuthorizationNumber"/>
+               <value value="EU/1/15/1007/002-004-P1"/>
+            </identifier>
+            <subject>
+               <reference value="MedicinalProductDefinition/14055394"/>
+            </subject>
+            <status>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Regulatory Entitlement Status"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072049"/>
+                  <code value="100000072099"/>
+                  <display value="Valid"/>
+               </coding>
+            </status>
+         </RegulatedAuthorization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="AdministrableProductDefinition/1949260"/>
+      <resource>
+         <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="1949260"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1949260"/>
+            </identifier>
+            <formOf>
+               <reference value="MedicinalProductDefinition/14055394"/>
+            </formOf>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073600"/>
+                     <display value="intramuskuläre Anwendung"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+         </AdministrableProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1275468"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1275468"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1275468"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1707610"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 11  L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/396512"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="396512"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="396512"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1707611"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 6  L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/288232"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="288232"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="288232"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1707612"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 16  L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1281849"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1281849"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1281849"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1707613"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 18  L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/2507707"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="2507707"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2507707"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="8280082"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 31 L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/408417"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="408417"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="408417"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="8280087"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 33 L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/745830"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="745830"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="745830"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="8280097"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 45 L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1907829"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1907829"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1907829"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="8280099"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 52 L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/4474581"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="4474581"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="4474581"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/1949260"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="8280113"/>
+                        <display value="HUMANES PAPILLOMVIRUS-TYP 58 L1-PROTEIN"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+</Bundle>

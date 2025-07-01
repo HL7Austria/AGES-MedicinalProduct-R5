@@ -1,0 +1,291 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="asp-liste-3"/>
+   <meta>
+      <versionId value="2.0.0+20240208"/>
+      <lastUpdated value="2025-06-25T17:20:56.208+02:00"/>
+   </meta>
+   <identifier>
+      <value value="1.2.40.0.34.4.16"/>
+   </identifier>
+   <type value="collection"/>
+   <entry>
+      <fullUrl value="MedicinalProductDefinition/128592"/>
+      <resource>
+         <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="128592"/>
+            <identifier>
+               <system value="https://www.ages.at/fhir/referenceNumber"/>
+               <value value="128592"/>
+            </identifier>
+            <domain>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Domain"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
+                  <code value="100000000012"/>
+                  <display value="Human"/>
+               </coding>
+            </domain>
+            <combinedPharmaceuticalDoseForm>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Combined Pharmaceutical Dose Form"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
+                  <code value="100000073681"/>
+                  <display value="Brausetablette"/>
+               </coding>
+            </combinedPharmaceuticalDoseForm>
+            <legalStatusOfSupply>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Legal Status for the Supply"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
+                  <code value="200000017695"/>
+                  <display value="Arzneimittel zur Abgabe ohne aerztliche Verschreibung"/>
+               </coding>
+            </legalStatusOfSupply>
+            <classification>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="100000097266"/>
+                  <display value="Acetylsalicylsäure"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="N02BA01"/>
+                  <display value="Acetylsalicylsäure"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="100000094119"/>
+                  <display value="Ascorbinsäure (Vitamin C), Kombinationen"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="A11GB"/>
+                  <display value="Ascorbinsäure (Vitamin C), Kombinationen"/>
+               </coding>
+            </classification>
+            <name>
+               <productName value="Aspirin + C Brausetabletten"/>
+            </name>
+         </MedicinalProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="PackagedProductDefinition/3515532"/>
+      <resource>
+         <PackagedProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="3515532"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <value value="3515532"/>
+            </identifier>
+            <packageFor>
+               <reference value="MedicinalProductDefinition/128592"/>
+            </packageFor>
+            <containedItemQuantity>
+               <value value="40.0"/>
+               <unit value="Tablette"/>
+               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <code value="200000002152"/>
+            </containedItemQuantity>
+            <marketingStatus>
+               <status>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Marketing Status"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000072052"/>
+                     <code value="100000072075"/>
+                     <display value="Keine Daten übermittelt"/>
+                  </coding>
+               </status>
+            </marketingStatus>
+            <packaging>
+               <type>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Packaging"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073346"/>
+                     <code value="100000073547"/>
+                     <display value="Beutel"/>
+                  </coding>
+               </type>
+            </packaging>
+         </PackagedProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="RegulatedAuthorization/14079"/>
+      <resource>
+         <RegulatedAuthorization xmlns="http://hl7.org/fhir">
+            <id value="14079"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/marketingAuthorizationNumber"/>
+               <value value="14079"/>
+            </identifier>
+            <subject>
+               <reference value="MedicinalProductDefinition/128592"/>
+            </subject>
+            <status>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Regulatory Entitlement Status"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072049"/>
+                  <code value="100000072099"/>
+                  <display value="Valid"/>
+               </coding>
+            </status>
+            <holder>
+               <reference value="LOC-100075177"/>
+               <display value="Bayer Austria Ges.m.b.H."/>
+            </holder>
+         </RegulatedAuthorization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="AdministrableProductDefinition/2057607"/>
+      <resource>
+         <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="2057607"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2057607"/>
+            </identifier>
+            <formOf>
+               <reference value="MedicinalProductDefinition/128592"/>
+            </formOf>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073619"/>
+                     <display value="zum Einnehmen"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+         </AdministrableProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/716774"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="716774"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="716774"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2057607"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1707562"/>
+                        <display value="ASCORBINSÄURE"/>
+                     </coding>
+                  </concept>
+               </code>
+               <strength>
+                  <presentationRatio>
+                     <numerator>
+                        <value value="0.24"/>
+                        <unit value="g"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/100000110633"/>
+                        <code value="100000110654"/>
+                     </numerator>
+                     <denominator>
+                        <value value="1.0"/>
+                        <unit value="Tablette"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/>
+                        <code value="200000002152"/>
+                     </denominator>
+                  </presentationRatio>
+               </strength>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1321640"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1321640"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1321640"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2057607"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1709716"/>
+                        <display value="ACETYLSALICYLSÄURE"/>
+                     </coding>
+                  </concept>
+               </code>
+               <strength>
+                  <presentationRatio>
+                     <numerator>
+                        <value value="0.4"/>
+                        <unit value="g"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/100000110633"/>
+                        <code value="100000110654"/>
+                     </numerator>
+                     <denominator>
+                        <value value="1.0"/>
+                        <unit value="Tablette"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/>
+                        <code value="200000002152"/>
+                     </denominator>
+                  </presentationRatio>
+               </strength>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+</Bundle>

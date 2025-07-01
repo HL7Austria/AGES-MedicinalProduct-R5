@@ -1,0 +1,223 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="asp-liste-8"/>
+   <meta>
+      <versionId value="2.0.0+20240208"/>
+      <lastUpdated value="2025-06-25T17:17:45.024+02:00"/>
+   </meta>
+   <identifier>
+      <value value="1.2.40.0.34.4.16"/>
+   </identifier>
+   <type value="collection"/>
+   <entry>
+      <fullUrl value="MedicinalProductDefinition/100406362"/>
+      <resource>
+         <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="100406362"/>
+            <identifier>
+               <system value="https://www.ages.at/fhir/referenceNumber"/>
+               <value value="100406362"/>
+            </identifier>
+            <domain>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Domain"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
+                  <code value="100000000012"/>
+                  <display value="Human"/>
+               </coding>
+            </domain>
+            <combinedPharmaceuticalDoseForm>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Combined Pharmaceutical Dose Form"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
+                  <code value="100000074068"/>
+                  <display value="Injektionsdispersion"/>
+               </coding>
+            </combinedPharmaceuticalDoseForm>
+            <legalStatusOfSupply>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Legal Status for the Supply"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
+                  <code value="200000017698"/>
+                  <display value="Arzneimittel zur einmaligen Abgabe auf aerztliche Verschreibung"/>
+               </coding>
+            </legalStatusOfSupply>
+            <classification>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="200000030565"/>
+                  <display value="COVID-19-mRNA-Impfstoff"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="J07BX03"/>
+                  <display value="COVID-19-mRNA-Impfstoff"/>
+               </coding>
+            </classification>
+            <name>
+               <productName value="Comirnaty 30 Mikrogramm/Dosis Injektionsdispersion; COVID-19-mRNA-Impfstoff (Nukleosid-modifiziert)"/>
+            </name>
+         </MedicinalProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="PackagedProductDefinition/5506359"/>
+      <resource>
+         <PackagedProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="5506359"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <value value="5506359"/>
+            </identifier>
+            <packageFor>
+               <reference value="MedicinalProductDefinition/100406362"/>
+            </packageFor>
+            <containedItemQuantity>
+               <value value="1.0"/>
+               <unit value="Durchstechflasche"/>
+               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <code value="200000002158"/>
+            </containedItemQuantity>
+            <marketingStatus>
+               <status>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Marketing Status"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000072052"/>
+                     <code value="100000072075"/>
+                     <display value="Keine Daten übermittelt"/>
+                  </coding>
+               </status>
+            </marketingStatus>
+            <packaging>
+               <type>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Packaging"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073346"/>
+                     <code value="100000073563"/>
+                     <display value="Durchstechflasche"/>
+                  </coding>
+               </type>
+            </packaging>
+         </PackagedProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="RegulatedAuthorization/EU/1/20/1528/002-003,013"/>
+      <resource>
+         <RegulatedAuthorization xmlns="http://hl7.org/fhir">
+            <id value="002-003,013"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/marketingAuthorizationNumber"/>
+               <value value="EU/1/20/1528/002-003,013"/>
+            </identifier>
+            <subject>
+               <reference value="MedicinalProductDefinition/100406362"/>
+            </subject>
+            <status>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Regulatory Entitlement Status"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072049"/>
+                  <code value="200000010409"/>
+                  <display value="Surrendered"/>
+               </coding>
+            </status>
+            <holder>
+               <reference value="LOC-100047650"/>
+               <display value="Biontech Manufacturing GmbH"/>
+            </holder>
+         </RegulatedAuthorization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="AdministrableProductDefinition/2031677"/>
+      <resource>
+         <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="2031677"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2031677"/>
+            </identifier>
+            <formOf>
+               <reference value="MedicinalProductDefinition/100406362"/>
+            </formOf>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073600"/>
+                     <display value="intramuskuläre Anwendung"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+         </AdministrableProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/22582997"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="22582997"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="22582997"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2031677"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="101102201"/>
+                        <display value="TOZINAMERAN"/>
+                     </coding>
+                  </concept>
+               </code>
+               <strength>
+                  <presentationRatio>
+                     <numerator>
+                        <value value="30.0"/>
+                        <unit value="µg"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/100000110633"/>
+                        <code value="100000110656"/>
+                     </numerator>
+                     <denominator>
+                        <value value="1.0"/>
+                        <unit value="Durchstechflasche"/>
+                        <system value="https://spor.ema.europa.eu/v1/lists/200000000014"/>
+                        <code value="200000002158"/>
+                     </denominator>
+                  </presentationRatio>
+               </strength>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+</Bundle>

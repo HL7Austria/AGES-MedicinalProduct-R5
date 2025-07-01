@@ -1,0 +1,315 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="asp-liste-6"/>
+   <meta>
+      <versionId value="2.0.0+20240208"/>
+      <lastUpdated value="2025-06-25T17:19:17.596+02:00"/>
+   </meta>
+   <identifier>
+      <value value="1.2.40.0.34.4.16"/>
+   </identifier>
+   <type value="collection"/>
+   <entry>
+      <fullUrl value="MedicinalProductDefinition/948257"/>
+      <resource>
+         <MedicinalProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="948257"/>
+            <identifier>
+               <system value="https://www.ages.at/fhir/referenceNumber"/>
+               <value value="948257"/>
+            </identifier>
+            <domain>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Domain"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000000004"/>
+                  <code value="100000000012"/>
+                  <display value="Human"/>
+               </coding>
+            </domain>
+            <combinedPharmaceuticalDoseForm>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Combined Pharmaceutical Dose Form"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/200000000006"/>
+                  <code value="100000074063"/>
+                  <display value="Suspension for injection in pre-filled syringe"/>
+               </coding>
+            </combinedPharmaceuticalDoseForm>
+            <legalStatusOfSupply>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Legal Status for the Supply"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072051"/>
+                  <code value="200000017698"/>
+                  <display value="Arzneimittel zur einmaligen Abgabe auf aerztliche Verschreibung"/>
+               </coding>
+            </legalStatusOfSupply>
+            <classification>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Anatomical Therapeutic Chemical classification system - Human"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000093533"/>
+                  <code value="100000096601"/>
+                  <display value="Diphtherie-Pertussis-Poliomyelitis-Tetanus"/>
+               </coding>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/atcGroup">
+                     <valueString value="???"/>
+                  </extension>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="J07CA02"/>
+                  <display value="Diphtherie-Pertussis-Poliomyelitis-Tetanus"/>
+               </coding>
+            </classification>
+            <name>
+               <productName value="Boostrix Polio - Injektionssuspension in einer Fertigspritze"/>
+            </name>
+         </MedicinalProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="PackagedProductDefinition/2457324"/>
+      <resource>
+         <PackagedProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="2457324"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/dataCarrierIdentifier"/>
+               <value value="2457324"/>
+            </identifier>
+            <packageFor>
+               <reference value="MedicinalProductDefinition/948257"/>
+            </packageFor>
+            <containedItemQuantity>
+               <value value="1.0"/>
+               <unit value="Spritze"/>
+               <system value="https://ema.europa.eu/fhir/vs/unitsOfPresentation"/>
+               <code value="200000002150"/>
+            </containedItemQuantity>
+            <marketingStatus>
+               <status>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Marketing Status"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000072052"/>
+                     <code value="100000072075"/>
+                     <display value="Keine Daten übermittelt"/>
+                  </coding>
+               </status>
+            </marketingStatus>
+            <packaging>
+               <type>
+                  <coding>
+                     <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                        <valueString value="Packaging"/>
+                     </extension>
+                     <system value="https://spor.ema.europa.eu/v1/lists/100000073346"/>
+                     <code value="100000073544"/>
+                     <display value="Fertigspritze"/>
+                  </coding>
+               </type>
+            </packaging>
+         </PackagedProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="RegulatedAuthorization/2-00302"/>
+      <resource>
+         <RegulatedAuthorization xmlns="http://hl7.org/fhir">
+            <id value="2-00302"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/marketingAuthorizationNumber"/>
+               <value value="2-00302"/>
+            </identifier>
+            <subject>
+               <reference value="MedicinalProductDefinition/948257"/>
+            </subject>
+            <status>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Regulatory Entitlement Status"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072049"/>
+                  <code value="100000072099"/>
+                  <display value="Valid"/>
+               </coding>
+            </status>
+            <holder>
+               <reference value="LOC-100071240"/>
+               <display value="GlaxoSmithKline Pharma GmbH"/>
+            </holder>
+         </RegulatedAuthorization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="AdministrableProductDefinition/2059231"/>
+      <resource>
+         <AdministrableProductDefinition xmlns="http://hl7.org/fhir">
+            <id value="2059231"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="2059231"/>
+            </identifier>
+            <formOf>
+               <reference value="MedicinalProductDefinition/948257"/>
+            </formOf>
+            <routeOfAdministration>
+               <code>
+                  <coding>
+                     <code value="100000073600"/>
+                     <display value="intramuskuläre Anwendung"/>
+                  </coding>
+               </code>
+            </routeOfAdministration>
+         </AdministrableProductDefinition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/418788"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="418788"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="418788"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2059231"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1708114"/>
+                        <display value="CORYNEBACTERIUM DIPHTHERIAE (AUSZUG, PRODUKTE)"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1083373"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1083373"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1083373"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2059231"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1708214"/>
+                        <display value="BORDETELLA PERTUSSIS"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1540646"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1540646"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1540646"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2059231"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1708219"/>
+                        <display value="CLOSTRIDIUM TETANI (AUSZUG, PRODUKTE)"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="Ingredient/1110706"/>
+      <resource>
+         <Ingredient xmlns="http://hl7.org/fhir">
+            <id value="1110706"/>
+            <identifier>
+               <system value="http://ema.europa.eu/fhir/???"/>
+               <value value="1110706"/>
+            </identifier>
+            <for>
+               <reference value="AdministrableProductDefinition/2059231"/>
+            </for>
+            <role>
+               <coding>
+                  <extension url="http://ema.europa.eu/fhir/extension/codeSystemName">
+                     <valueString value="Ingredient Role"/>
+                  </extension>
+                  <system value="https://spor.ema.europa.eu/v1/lists/100000072050"/>
+                  <code value="100000072072"/>
+                  <display value="Wirkstoff"/>
+               </coding>
+            </role>
+            <substance>
+               <code>
+                  <concept>
+                     <coding>
+                        <system value="https://spor.ema.europa.eu/v1/lists/substanceDefinition"/>
+                        <code value="1709005"/>
+                        <display value="POLIOMYELITISVIRUS"/>
+                     </coding>
+                  </concept>
+               </code>
+            </substance>
+         </Ingredient>
+      </resource>
+   </entry>
+</Bundle>
