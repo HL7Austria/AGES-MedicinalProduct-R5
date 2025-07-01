@@ -4,7 +4,7 @@ Title: "Domain"
 Description:  "Domain"
 * ^meta.versionId = "5.0.0" // TODO: ??
 * ^meta.lastUpdated = "2023-08-03T11:35:00.198Z"
-// The line below overrides the canonical URL (which is the default). 
+// The line below overrides the canonical URL (which is the default).
 * ^url = "https://spor.ema.europa.eu/v1/lists/100000073346"
 * ^status = #active
 * ^version = "5.0.0"
@@ -87,6 +87,9 @@ Description:  "Domain"
 * #100000073561 "Tube"
 * #100000073562 "Vaginal sponge applicator"
 * #100000073563 "Vial"
+  * ^designation[0].use = $cs-sct#900000000000013009 "Synonym (core metadata concept)"
+  * ^designation[0].language = urn:ietf:bcp:47#de
+  * ^designation[0].value = "Durchstechflasche"
 * #100000075664 "Administration system"
 * #100000116196 "Needle-free injector"
 * #100000116197 "Roll-on container"
